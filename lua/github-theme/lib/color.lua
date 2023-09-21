@@ -335,9 +335,9 @@ end
 
 --#region Constants ------------------------------------------------------------
 
-Color.WHITE = Color.init(1, 1, 1, 1)
-Color.BLACK = Color.init(0, 0, 0, 1)
-Color.BG = Color.init(0, 0, 0, 1)
+-- Color.WHITE = Color.init(1, 1, 1, 1)
+-- Color.BLACK = Color.init(0, 0, 0, 1)
+-- Color.BG = Color.init(0, 0, 0, 1)
 
 --#endregion
 
@@ -365,6 +365,22 @@ end
 
 --#endregion
 
+---Constructs a function which, when called, returns a new color that is a
+---linear blend of `bgcolor` and `color`. The returned color is a css hex color
+---string.
+---@param bgcolor Color
+function Color.AlphaBlend(bgcolor)
+  -- Create and retain ref to an immutable/hidden copy
+  bgcolor = setmetatable(vim.deepcopy(bgcolor), getmetatable(bgcolor))
+
+  ---@param color Color
+  ---@param amount number A float between 0 and 1 (where 0 results in only `bgcolor`, 1 only `color`).
+  ---@return string color css hex color string
+  return function(color, amount)
+    return bgcolor:blend(color, amount):to_css()
+  end
+end
+
 local mt = getmetatable(Color)
 function mt.__call(_, opts)
   if type(opts) == 'string' or type(opts) == 'number' then
@@ -378,6 +394,50 @@ function mt.__call(_, opts)
   end
   if opts.lightness then
     return Color.from_hsl(opts.hue, opts.saturation, opts.lightness)
+  end
+end
+
+do
+  local switch = setmetatable({
+    WHITE = function(self)
+      local cs = vim.g.colors_name or ''
+
+      if cs:find('^github%W') then
+        local primitives =
+          require('github-theme.palette.primitives.' .. cs:gsub('^github%W*', '', 1))
+        return self(primitives.scale.white)
+      else
+        return self.init(1, 1, 1, 1)
+      end
+    end,
+
+    BLACK = function(self)
+      local cs = vim.g.colors_name or ''
+
+      if cs:find('^github%W') then
+        local primitives =
+          require('github-theme.palette.primitives.' .. cs:gsub('^github%W*', '', 1))
+        return self(primitives.scale.black)
+      else
+        return self.init(0, 0, 0, 1)
+      end
+    end,
+
+    ---Retrieves the current bg color. Works if `bg` is set on `Normal`, and
+    ---works for any colorscheme.
+    BG = function(self)
+      local bg = vim.api.nvim_get_hl(0, { name = 'Normal', link = false }).bg
+      bg = bg or self.init(0, 0, 0, 1)
+      return self(bg)
+    end,
+  }, {
+    __index = function()
+      return function() end
+    end,
+  })
+
+  function mt.__index(self, k)
+    return switch[k](self)
   end
 end
 

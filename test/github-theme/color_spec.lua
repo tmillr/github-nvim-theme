@@ -1,5 +1,6 @@
 local Color = require('github-theme.lib.color')
 local assert = require('luassert')
+local rand = math.random
 
 -- stylua: ignore
 local ex = {
@@ -139,6 +140,47 @@ describe('Color', function()
       local c = Color.from_hex(ex.str)
       assert.are.same('#3a457d', c:rotate(15):to_css())
       assert.are.same('#3a677d', c:rotate(-15):to_css())
+    end)
+  end)
+
+  describe('AlphaBlend()', function()
+    local AlphaBlend = Color.AlphaBlend
+    local bg_save = Color.BG
+    local c1, c2 =
+      Color.from_rgba(rand(0, 255), rand(0, 255), rand(0, 255), 1),
+      Color.from_rgba(rand(0, 255), rand(0, 255), rand(0, 255), 1)
+
+    after_each(function()
+      Color.BG = bg_save
+    end)
+
+    it('should return a function which returns a string', function()
+      assert.is.equal('function', type(AlphaBlend(assert(c1))))
+      assert.is.equal('string', type(AlphaBlend(c1)(c2, 0.5)))
+    end)
+
+    it('should blend correctly', function()
+      local amount = rand()
+      Color.BG = c1
+      local blended = c2:alpha_blend(amount):to_css()
+      local alpha = AlphaBlend(c1)
+      assert.are.equal(blended, alpha(c2, amount))
+
+      -- Shouldn't rely on Color.BG, or any other global state
+      Color.BG = bg_save
+      assert.are.equal(blended, alpha(c2, amount))
+
+      -- Should retain an immutable copy of c1
+      c1.red = ((c1.red + 16) % 256) / 255
+      assert.are.equal(blended, alpha(c2, amount))
+    end)
+
+    it('should blend correctly', function()
+      Color.BG = c1
+      assert.are.equal(c1:to_css(), c2:alpha_blend(0):to_css())
+      assert.are.equal(c2:to_css(), c2:alpha_blend(1):to_css())
+      assert.are.equal(c1:to_css(), AlphaBlend(c1)(c2, 0))
+      assert.are.equal(c2:to_css(), AlphaBlend(c1)(c2, 1))
     end)
   end)
 end)

@@ -10,14 +10,7 @@ local primitives =
 
 local pl = primitives.prettylights
 local scale = primitives.scale
-
-C.WHITE = C(scale.white)
-C.BLACK = C(scale.black)
-C.BG = C(assert(primitives.canvas.default))
-
-local function alpha(color, a)
-  return color:alpha_blend(a):to_css()
-end
+local alpha = C.AlphaBlend(C(assert(primitives.canvas.default)))
 
 local palette = {
   scale = scale,

@@ -75,37 +75,30 @@ local template = require('github-theme.util.template')
 local M = {}
 
 local function override(spec, palette, ovr)
+  if not ovr then
+    return spec
+  end
   ovr = template.parse(ovr, palette)
   return collect.deep_extend(spec, ovr)
 end
 
-function M.load(name)
+---@param theme? string
+---@return table spec
+function M.load(theme)
   local ovr = require('github-theme.override').specs
+  local result = {}
 
-  local function apply_ovr(key, spec, palette)
-    return ovr[key] and override(spec, palette, ovr[key]) or spec
-  end
-
-  if name then
-    local palette = require('github-theme.palette').load(name)
+  ---@diagnostic disable-next-line: redefined-local
+  for _, theme in ipairs(theme and { theme } or require('github-theme.palette').themes) do
+    local palette = require('github-theme.palette').load(theme)
     local spec = palette.generate_spec(palette)
-    spec = apply_ovr('all', spec, palette)
-    spec = apply_ovr(name, spec, palette)
+    spec = override(spec, palette, ovr.all)
+    spec = override(spec, palette, ovr[theme])
     spec.palette = palette
-    return spec
-  else
-    local result = {}
-    local themes = require('github-theme.palette').themes
-    for _, mod in ipairs(themes) do
-      local palette = require('github-theme.palette').load(mod)
-      local spec = palette.generate_spec(palette)
-      spec = apply_ovr('all', spec, palette)
-      spec = apply_ovr(mod, spec, palette)
-      spec.palette = palette
-      result[mod] = spec
-    end
-    return result
+    result[theme] = spec
   end
+
+  return theme and result[theme] or result
 end
 
 return M

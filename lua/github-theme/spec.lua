@@ -3,7 +3,7 @@ local template = require('github-theme.util.template')
 
 --#region Types
 
----@class Spec
+---@class GithubTheme.Spec
 ---@field bg0 string
 ---@field bg1 string
 ---@field bg2 string
@@ -16,13 +16,13 @@ local template = require('github-theme.util.template')
 ---@field sel0 string
 ---@field sel1 string
 ---@field sel2 string
----@field syntax SpecSyntax
----@field diag SpecDiagnostic
----@field diag_bg SpecDiagnosticBg
----@field diff SpecDiff
----@field git SpecGit
+---@field syntax GithubTheme.Spec.Syntax
+---@field diag GithubTheme.Spec.Diagnostic
+---@field diag_bg GithubTheme.Spec.Diagnostic.Bg
+---@field diff GithubTheme.Spec.Diff
+---@field git GithubTheme.Spec.Git
 
----@class SpecSyntax
+---@class GithubTheme.Spec.Syntax
 ---@field bracket string
 ---@field builtin0 string
 ---@field builtin1 string
@@ -47,25 +47,25 @@ local template = require('github-theme.util.template')
 ---@field type string
 ---@field variable string
 
----@class SpecDiagnostic
+---@class GithubTheme.Spec.Diagnostic
 ---@field error string
 ---@field warn string
 ---@field info string
 ---@field hint string
 
----@class SpecDiagnosticBg
+---@class GithubTheme.Spec.Diagnostic.Bg
 ---@field error string
 ---@field warn string
 ---@field info string
 ---@field hint string
 
----@class SpecDiff
+---@class GithubTheme.Spec.Diff
 ---@field add string
 ---@field delete string
 ---@field change string
 ---@field text string
 
----@class SpecGit
+---@class GithubTheme.Spec.Git
 ---@field add string
 ---@field removed string
 ---@field changed string

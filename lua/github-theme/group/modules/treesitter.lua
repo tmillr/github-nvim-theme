@@ -10,7 +10,7 @@ function M.get(spec, config, opts)
         :gsub('^github_(.-)$', '%1')
   )
 
-  local pl = primitives.prettylights
+  local pl = primitives.color.prettylights
   local syn = spec.syntax
   local stl = config.styles
   local P = spec.palette

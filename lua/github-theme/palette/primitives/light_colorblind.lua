@@ -1,623 +1,1685 @@
 -- NOTE: THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT BY-HAND.
-local M = vim.json.decode(
-  [=[{
-  "canvasDefaultTransparent": "rgba(255,255,255,0)",
-  "pageHeaderBg": "#f6f8fa",
-  "marketingIcon": {
-    "primary": "#218bff",
-    "secondary": "#54aeff"
-  },
-  "diffBlob": {
-    "addition": {
-      "numText": "#24292f",
-      "fg": "#24292f",
-      "numBg": "rgba(84,174,255,0.4)",
-      "lineBg": "rgba(221,244,255,0.5)",
-      "wordBg": "rgba(84,174,255,0.4)"
-    },
-    "deletion": {
-      "numText": "#24292f",
-      "fg": "#24292f",
-      "numBg": "rgba(247,153,57,0.4)",
-      "lineBg": "rgba(255,245,232,0.5)",
-      "wordBg": "rgba(255,188,109,0.5)"
-    },
-    "hunk": {
-      "numBg": "rgba(84,174,255,0.4)"
-    },
-    "expander": {
-      "icon": "#57606a"
-    },
-    "selectedLineHighlightMixBlendMode": "multiply"
-  },
-  "diffstat": {
-    "deletionBorder": "rgba(27,31,36,0.15)",
-    "additionBorder": "rgba(27,31,36,0.15)",
-    "additionBg": "#0969da"
-  },
-  "searchKeyword": {
-    "hl": "#fff8c5"
-  },
-  "prettylights": {
-    "syntax": {
-      "comment": "#57606a",
-      "constant": "#0550ae",
-      "entity": "#6639ba",
-      "storageModifierImport": "#24292f",
-      "entityTag": "#0550ae",
-      "keyword": "#b35900",
-      "string": "#0a3069",
-      "variable": "#8a4600",
-      "brackethighlighterUnmatched": "#6f3800",
-      "invalidIllegalText": "#f6f8fa",
-      "invalidIllegalBg": "#6f3800",
-      "carriageReturnText": "#f6f8fa",
-      "carriageReturnBg": "#b35900",
-      "stringRegexp": "#0550ae",
-      "markupList": "#3b2300",
-      "markupHeading": "#0550ae",
-      "markupItalic": "#24292f",
-      "markupBold": "#24292f",
-      "markupDeletedText": "#6f3800",
-      "markupDeletedBg": "#fff5e8",
-      "markupInsertedText": "#0550ae",
-      "markupInsertedBg": "#ddf4ff",
-      "markupChangedText": "#8a4600",
-      "markupChangedBg": "#ffddb0",
-      "markupIgnoredText": "#eaeef2",
-      "markupIgnoredBg": "#0550ae",
-      "metaDiffRange": "#8250df",
-      "brackethighlighterAngle": "#57606a",
-      "sublimelinterGutterMark": "#8c959f",
-      "constantOtherReferenceLink": "#0a3069"
-    }
-  },
-  "codemirror": {
-    "text": "#24292f",
-    "bg": "#ffffff",
-    "guttersBg": "#ffffff",
-    "guttermarkerText": "#ffffff",
-    "guttermarkerSubtleText": "#6e7781",
-    "linenumberText": "#57606a",
-    "cursor": "#24292f",
-    "selectionBg": "rgba(84,174,255,0.4)",
-    "activelineBg": "rgba(234,238,242,0.5)",
-    "matchingbracketText": "#24292f",
-    "linesBg": "#ffffff",
-    "syntax": {
-      "comment": "#24292f",
-      "constant": "#0550ae",
-      "entity": "#8250df",
-      "keyword": "#b35900",
-      "storage": "#b35900",
-      "string": "#0a3069",
-      "support": "#0550ae",
-      "variable": "#8a4600"
-    }
-  },
-  "checks": {
-    "bg": "#24292f",
-    "runBorderWidth": "0px",
-    "containerBorderWidth": "0px",
-    "textPrimary": "#f6f8fa",
-    "textSecondary": "#8c959f",
-    "textLink": "#54aeff",
-    "btnIcon": "#afb8c1",
-    "btnHoverIcon": "#f6f8fa",
-    "btnHoverBg": "rgba(255,255,255,0.125)",
-    "inputText": "#eaeef2",
-    "inputPlaceholderText": "#8c959f",
-    "inputFocusText": "#8c959f",
-    "inputBg": "#32383f",
-    "inputShadow": "none",
-    "donutError": "#dd7815",
-    "donutPending": "#bf8700",
-    "donutSuccess": "#0969da",
-    "donutNeutral": "#afb8c1",
-    "dropdownText": "#afb8c1",
-    "dropdownBg": "#32383f",
-    "dropdownBorder": "#424a53",
-    "dropdownShadow": "rgba(27,31,36,0.3)",
-    "dropdownHoverText": "#f6f8fa",
-    "dropdownHoverBg": "#424a53",
-    "dropdownBtnHoverText": "#f6f8fa",
-    "dropdownBtnHoverBg": "#32383f",
-    "scrollbarThumbBg": "#57606a",
-    "headerLabelText": "#d0d7de",
-    "headerLabelOpenText": "#f6f8fa",
-    "headerBorder": "#32383f",
-    "headerIcon": "#8c959f",
-    "lineText": "#d0d7de",
-    "lineNumText": "rgba(140,149,159,0.75)",
-    "lineTimestampText": "#8c959f",
-    "lineHoverBg": "#32383f",
-    "lineSelectedBg": "rgba(33,139,255,0.15)",
-    "lineSelectedNumText": "#54aeff",
-    "lineDtFmText": "#24292f",
-    "lineDtFmBg": "#9a6700",
-    "gateBg": "rgba(125,78,0,0.15)",
-    "gateText": "#d0d7de",
-    "gateWaitingText": "#d4a72c",
-    "stepHeaderOpenBg": "#32383f",
-    "stepErrorText": "#f79939",
-    "stepWarningText": "#d4a72c",
-    "loglineText": "#8c959f",
-    "loglineNumText": "rgba(140,149,159,0.75)",
-    "loglineDebugText": "#c297ff",
-    "loglineErrorText": "#d0d7de",
-    "loglineErrorNumText": "#f79939",
-    "loglineErrorBg": "rgba(138,70,0,0.15)",
-    "loglineWarningText": "#d0d7de",
-    "loglineWarningNumText": "#d4a72c",
-    "loglineWarningBg": "rgba(125,78,0,0.15)",
-    "loglineCommandText": "#54aeff",
-    "loglineSectionText": "#54aeff",
-    "ansi": {
-      "black": "#24292f",
-      "blackBright": "#32383f",
-      "white": "#d0d7de",
-      "whiteBright": "#d0d7de",
-      "gray": "#8c959f",
-      "red": "#f79939",
-      "redBright": "#ffbc6d",
-      "green": "#54aeff",
-      "greenBright": "#80ccff",
-      "yellow": "#d4a72c",
-      "yellowBright": "#eac54f",
-      "blue": "#54aeff",
-      "blueBright": "#80ccff",
-      "magenta": "#c297ff",
-      "magentaBright": "#d8b9ff",
-      "cyan": "#76e3ea",
-      "cyanBright": "#b3f0ff"
-    }
-  },
-  "project": {
-    "headerBg": "#24292f",
-    "sidebarBg": "#ffffff",
-    "gradientIn": "#ffffff",
-    "gradientOut": "rgba(255,255,255,0)"
-  },
-  "mktg": {
-    "btn": {
-      "bg": "#1b1f23",
-      "shadow": {
-        "outline": "rgb(0 0 0 / 15%) 0 0 0 1px inset",
-        "focus": "rgb(0 0 0 / 15%) 0 0 0 4px",
-        "hover": "0 3px 2px rgba(0, 0, 0, 0.07), 0 7px 5px rgba(0, 0, 0, 0.04), 0 12px 10px rgba(0, 0, 0, 0.03), 0 22px 18px rgba(0, 0, 0, 0.03), 0 42px 33px rgba(0, 0, 0, 0.02), 0 100px 80px rgba(0, 0, 0, 0.02)",
-        "hoverMuted": "rgb(0 0 0 / 70%) 0 0 0 2px inset"
-      }
-    }
-  },
-  "control": {
-    "borderColor": {
-      "emphasis": "#858F99"
-    }
-  },
-  "avatar": {
-    "bg": "#ffffff",
-    "border": "rgba(27,31,36,0.15)",
-    "stackFade": "#afb8c1",
-    "stackFadeMore": "#d0d7de",
-    "childShadow": "0 0 0 2px rgba(255,255,255,0.8)"
-  },
-  "topicTag": {
-    "border": "rgba(0,0,0,0)"
-  },
-  "counter": {
-    "border": "rgba(0,0,0,0)"
-  },
-  "selectMenu": {
-    "backdropBorder": "rgba(0,0,0,0)",
-    "tapHighlight": "rgba(175,184,193,0.5)",
-    "tapFocusBg": "#b6e3ff"
-  },
-  "overlay": {
-    "shadow": "0 1px 3px rgba(27,31,36,0.12), 0 8px 24px rgba(66,74,83,0.12)",
-    "backdrop": "rgba(140,149,159,0.2)"
-  },
-  "header": {
-    "text": "rgba(255,255,255,0.7)",
-    "bg": "#24292f",
-    "divider": "#57606a",
-    "logo": "#ffffff"
-  },
-  "headerSearch": {
-    "bg": "#24292f",
-    "border": "#57606a"
-  },
-  "sidenav": {
-    "selectedBg": "#ffffff"
-  },
-  "menu": {
-    "bgActive": "rgba(0,0,0,0)"
-  },
-  "input": {
-    "disabledBg": "rgba(175,184,193,0.2)"
-  },
-  "timeline": {
-    "badgeBg": "#eaeef2"
-  },
-  "ansi": {
-    "black": "#24292f",
-    "blackBright": "#57606a",
-    "white": "#6e7781",
-    "whiteBright": "#8c959f",
-    "gray": "#6e7781",
-    "red": "#b35900",
-    "redBright": "#8a4600",
-    "green": "#0550ae",
-    "greenBright": "#0969da",
-    "yellow": "#4d2d00",
-    "yellowBright": "#633c01",
-    "blue": "#0969da",
-    "blueBright": "#218bff",
-    "magenta": "#8250df",
-    "magentaBright": "#a475f9",
-    "cyan": "#1b7c83",
-    "cyanBright": "#3192aa"
-  },
-  "btn": {
-    "text": "#24292f",
-    "bg": "#f6f8fa",
-    "border": "rgba(27,31,36,0.15)",
-    "shadow": "0 1px 0 rgba(27,31,36,0.04)",
-    "insetShadow": "inset 0 1px 0 rgba(255,255,255,0.25)",
-    "hoverBg": "#f3f4f6",
-    "hoverBorder": "rgba(27,31,36,0.15)",
-    "activeBg": "hsla(220,14%,93%,1)",
-    "activeBorder": "rgba(27,31,36,0.15)",
-    "selectedBg": "hsla(220,14%,94%,1)",
-    "counterBg": "rgba(27,31,36,0.08)",
-    "primary": {
-      "text": "#ffffff",
-      "bg": "#0969da",
-      "border": "rgba(27,31,36,0.15)",
-      "shadow": "0 1px 0 rgba(27,31,36,0.1)",
-      "insetShadow": "inset 0 1px 0 rgba(255,255,255,0.03)",
-      "hoverBg": "#0969da",
-      "hoverBorder": "rgba(27,31,36,0.15)",
-      "selectedBg": "hsla(212,92%,43%,1)",
-      "selectedShadow": "inset 0 1px 0 rgba(0,33,85,0.2)",
-      "disabledText": "rgba(255,255,255,0.8)",
-      "disabledBg": "#80ccff",
-      "disabledBorder": "rgba(27,31,36,0.15)",
-      "icon": "rgba(255,255,255,0.8)",
-      "counterBg": "rgba(0,33,85,0.2)"
-    },
-    "outline": {
-      "text": "#0969da",
-      "hoverText": "#ffffff",
-      "hoverBg": "#0969da",
-      "hoverBorder": "rgba(27,31,36,0.15)",
-      "hoverShadow": "0 1px 0 rgba(27,31,36,0.1)",
-      "hoverInsetShadow": "inset 0 1px 0 rgba(255,255,255,0.03)",
-      "hoverCounterBg": "rgba(255,255,255,0.2)",
-      "selectedText": "#ffffff",
-      "selectedBg": "hsla(212,92%,42%,1)",
-      "selectedBorder": "rgba(27,31,36,0.15)",
-      "selectedShadow": "inset 0 1px 0 rgba(0,33,85,0.2)",
-      "disabledText": "rgba(9,105,218,0.5)",
-      "disabledBg": "#f6f8fa",
-      "disabledCounterBg": "rgba(9,105,218,0.05)",
-      "counterBg": "#0969da1a",
-      "counterFg": "#0550ae",
-      "hoverCounterFg": "#ffffff",
-      "disabledCounterFg": "rgba(9,105,218,0.5)"
-    },
-    "danger": {
-      "text": "#b35900",
-      "hoverText": "#ffffff",
-      "hoverBg": "#8a4600",
-      "hoverBorder": "rgba(27,31,36,0.15)",
-      "hoverShadow": "0 1px 0 rgba(27,31,36,0.1)",
-      "hoverInsetShadow": "inset 0 1px 0 rgba(255,255,255,0.03)",
-      "hoverCounterBg": "rgba(255,255,255,0.2)",
-      "selectedText": "#ffffff",
-      "selectedBg": "hsla(30,100%,32%,1)",
-      "selectedBorder": "rgba(27,31,36,0.15)",
-      "selectedShadow": "inset 0 1px 0 rgba(65,32,0,0.2)",
-      "disabledText": "rgba(179,89,0,0.5)",
-      "disabledBg": "#f6f8fa",
-      "disabledCounterBg": "rgba(179,89,0,0.05)",
-      "counterBg": "rgba(179,89,0,0.1)",
-      "icon": "#b35900",
-      "hoverIcon": "#ffffff",
-      "counterFg": "#8a4600",
-      "hoverCounterFg": "#ffffff",
-      "disabledCounterFg": "rgba(179,89,0,0.5)"
-    },
-    "inactive": {
-      "bg": "#eaeef2",
-      "text": "#57606a"
-    }
-  },
-  "underlinenav": {
-    "icon": "#6e7781",
-    "borderHover": "rgba(175,184,193,0.2)"
-  },
-  "actionListItem": {
-    "inlineDivider": "rgba(208,215,222,0.48)",
-    "default": {
-      "hoverBg": "rgba(208,215,222,0.32)",
-      "hoverBorder": "rgba(0,0,0,0)",
-      "activeBg": "rgba(208,215,222,0.48)",
-      "activeBorder": "rgba(0,0,0,0)",
-      "selectedBg": "rgba(208,215,222,0.24)"
-    },
-    "danger": {
-      "hoverBg": "rgba(255,245,232,0.64)",
-      "activeBg": "#fff5e8",
-      "hoverText": "#b35900"
-    }
-  },
-  "switchTrack": {
-    "bg": "#eaeef2",
-    "hoverBg": "hsla(210,24%,90%,1)",
-    "activeBg": "hsla(210,24%,88%,1)",
-    "disabledBg": "#8c959f",
-    "fg": "#57606a",
-    "disabledFg": "#ffffff",
-    "border": "rgba(0,0,0,0)",
-    "checked": {
-      "bg": "#0969da",
-      "hoverBg": "#0860CA",
-      "activeBg": "#0757BA",
-      "fg": "#ffffff",
-      "disabledFg": "#ffffff",
-      "border": "rgba(0,0,0,0)"
-    }
-  },
-  "switchKnob": {
-    "bg": "#ffffff",
-    "disabledBg": "#f6f8fa",
-    "border": "#858F99",
-    "checked": {
-      "bg": "#ffffff",
-      "disabledBg": "#f6f8fa",
-      "border": "#0969da"
-    }
-  },
-  "segmentedControl": {
-    "bg": "#eaeef2",
-    "button": {
-      "bg": "#ffffff",
-      "hover": {
-        "bg": "rgba(175,184,193,0.2)"
-      },
-      "active": {
-        "bg": "rgba(175,184,193,0.4)"
-      },
-      "selected": {
-        "border": "#8c959f"
-      }
-    }
-  },
-  "treeViewItem": {
-    "chevron": {
-      "hoverBg": "rgba(208,215,222,0.32)"
-    },
-    "directory": {
-      "fill": "#54aeff"
-    }
-  },
-  "fg": {
-    "default": "#24292f",
-    "muted": "#57606a",
-    "subtle": "#6e7781",
-    "onEmphasis": "#ffffff"
-  },
-  "canvas": {
-    "default": "#ffffff",
-    "overlay": "#ffffff",
-    "inset": "#f6f8fa",
-    "subtle": "#f6f8fa"
-  },
-  "border": {
-    "default": "#d0d7de",
-    "muted": "hsla(210,18%,87%,1)",
-    "subtle": "rgba(27,31,36,0.15)"
-  },
-  "shadow": {
-    "small": "0 1px 0 rgba(27,31,36,0.04)",
-    "medium": "0 3px 6px rgba(140,149,159,0.15)",
-    "large": "0 8px 24px rgba(140,149,159,0.2)",
-    "extraLarge": "0 12px 28px rgba(140,149,159,0.3)"
-  },
-  "neutral": {
-    "emphasisPlus": "#24292f",
-    "emphasis": "#6e7781",
-    "muted": "rgba(175,184,193,0.2)",
-    "subtle": "rgba(234,238,242,0.5)"
-  },
-  "accent": {
-    "fg": "#0969da",
-    "emphasis": "#0969da",
-    "muted": "rgba(84,174,255,0.4)",
-    "subtle": "#ddf4ff"
-  },
-  "success": {
-    "fg": "#0969da",
-    "emphasis": "#0969da",
-    "muted": "rgba(84,174,255,0.4)",
-    "subtle": "#ddf4ff"
-  },
-  "attention": {
-    "fg": "#9a6700",
-    "emphasis": "#9a6700",
-    "muted": "rgba(212,167,44,0.4)",
-    "subtle": "#fff8c5"
-  },
-  "severe": {
-    "fg": "#b35900",
-    "emphasis": "#b35900",
-    "muted": "rgba(247,153,57,0.4)",
-    "subtle": "#fff5e8"
-  },
-  "danger": {
-    "fg": "#b35900",
-    "emphasis": "#b35900",
-    "muted": "rgba(247,153,57,0.4)",
-    "subtle": "#fff5e8"
-  },
-  "open": {
-    "fg": "#b35900",
-    "emphasis": "#dd7815",
-    "muted": "rgba(247,153,57,0.4)",
-    "subtle": "#fff5e8"
-  },
-  "closed": {
-    "fg": "#6e7781",
-    "emphasis": "#6e7781",
-    "muted": "rgba(175,184,193,0.4)",
-    "subtle": "#f6f8fa"
-  },
-  "done": {
-    "fg": "#8250df",
-    "emphasis": "#8250df",
-    "muted": "rgba(194,151,255,0.4)",
-    "subtle": "#fbefff"
-  },
-  "sponsors": {
-    "fg": "#bf3989",
-    "emphasis": "#bf3989",
-    "muted": "rgba(255,128,200,0.4)",
-    "subtle": "#ffeff7"
-  },
-  "primer": {
-    "fg": {
-      "disabled": "#8c959f"
-    },
-    "canvas": {
-      "backdrop": "rgba(27,31,36,0.5)",
-      "sticky": "rgba(255,255,255,0.95)"
-    },
-    "border": {
-      "active": "#fd8c73",
-      "contrast": "rgba(27,31,36,0.1)"
-    },
-    "shadow": {
-      "highlight": "inset 0 1px 0 rgba(255,255,255,0.25)",
-      "inset": "inset 0 1px 0 rgba(208,215,222,0.2)"
-    }
-  },
-  "scale": {
-    "black": "#1b1f24",
-    "white": "#ffffff",
-    "gray": [
-      "#f6f8fa",
-      "#eaeef2",
-      "#d0d7de",
-      "#afb8c1",
-      "#8c959f",
-      "#6e7781",
-      "#57606a",
-      "#424a53",
-      "#32383f",
-      "#24292f"
-    ],
-    "blue": [
-      "#ddf4ff",
-      "#b6e3ff",
-      "#80ccff",
-      "#54aeff",
-      "#218bff",
-      "#0969da",
-      "#0550ae",
-      "#033d8b",
-      "#0a3069",
-      "#002155"
-    ],
-    "green": [
-      "#ddf4ff",
-      "#b6e3ff",
-      "#80ccff",
-      "#54aeff",
-      "#218bff",
-      "#0969da",
-      "#0550ae",
-      "#033d8b",
-      "#0a3069",
-      "#002155"
-    ],
-    "yellow": [
-      "#fff8c5",
-      "#fae17d",
-      "#eac54f",
-      "#d4a72c",
-      "#bf8700",
-      "#9a6700",
-      "#7d4e00",
-      "#633c01",
-      "#4d2d00",
-      "#3b2300"
-    ],
-    "orange": [
-      "#fff5e8",
-      "#ffddb0",
-      "#ffbc6d",
-      "#f79939",
-      "#dd7815",
-      "#b35900",
-      "#8a4600",
-      "#6f3800",
-      "#572c00",
-      "#412000"
-    ],
-    "red": [
-      "#fff5e8",
-      "#ffddb0",
-      "#ffbc6d",
-      "#f79939",
-      "#dd7815",
-      "#b35900",
-      "#8a4600",
-      "#6f3800",
-      "#572c00",
-      "#412000"
-    ],
-    "purple": [
-      "#fbefff",
-      "#ecd8ff",
-      "#d8b9ff",
-      "#c297ff",
-      "#a475f9",
-      "#8250df",
-      "#6639ba",
-      "#512a97",
-      "#3e1f79",
-      "#2e1461"
-    ],
-    "pink": [
-      "#ffeff7",
-      "#ffd3eb",
-      "#ffadda",
-      "#ff80c8",
-      "#e85aad",
-      "#bf3989",
-      "#99286e",
-      "#772057",
-      "#611347",
-      "#4d0336"
-    ],
-    "coral": [
-      "#fff0eb",
-      "#ffd6cc",
-      "#ffb4a1",
-      "#fd8c73",
-      "#ec6547",
-      "#c4432b",
-      "#9e2f1c",
-      "#801f0f",
-      "#691105",
-      "#510901"
-    ]
-  }
-}]=],
-  { luanil = { object = false, array = false } }
-)
+local mt = {
+  __index = function(_, k)
+    error('invalid index: ' .. k)
+  end,
+}
+---@generic T
+---@param tbl T
+---@return T
+local function m(tbl)
+  return setmetatable(tbl, mt)
+end
+local M = m({
+  base = m({
+    color = m({
+      white = '#ffffff',
+      blue = m({
+        [0] = '#ddf4ff',
+        [1] = '#b6e3ff',
+        [2] = '#80ccff',
+        [3] = '#54aeff',
+        [4] = '#218bff',
+        [5] = '#0969da',
+        [6] = '#0550ae',
+        [7] = '#033d8b',
+        [8] = '#0a3069',
+        [9] = '#002155',
+      }),
+      green = m({
+        [0] = '#dafbe1',
+        [1] = '#aceebb',
+        [2] = '#6fdd8b',
+        [3] = '#4ac26b',
+        [4] = '#2da44e',
+        [5] = '#1a7f37',
+        [6] = '#116329',
+        [7] = '#044f1e',
+        [8] = '#003d16',
+        [9] = '#002d11',
+      }),
+      orange = m({
+        [0] = '#fff1e5',
+        [1] = '#ffd8b5',
+        [2] = '#ffb77c',
+        [3] = '#fb8f44',
+        [4] = '#e16f24',
+        [5] = '#bc4c00',
+        [6] = '#953800',
+        [7] = '#762c00',
+        [8] = '#5c2200',
+        [9] = '#471700',
+      }),
+      red = m({
+        [0] = '#ffebe9',
+        [1] = '#ffcecb',
+        [2] = '#ffaba8',
+        [3] = '#ff8182',
+        [4] = '#fa4549',
+        [5] = '#cf222e',
+        [6] = '#a40e26',
+        [7] = '#82071e',
+        [8] = '#660018',
+        [9] = '#4c0014',
+      }),
+      purple = m({
+        [0] = '#fbefff',
+        [1] = '#ecd8ff',
+        [2] = '#d8b9ff',
+        [3] = '#c297ff',
+        [4] = '#a475f9',
+        [5] = '#8250df',
+        [6] = '#6639ba',
+        [7] = '#512a97',
+        [8] = '#3e1f79',
+        [9] = '#2e1461',
+      }),
+      transparent = '#ffffff00',
+      neutral = m({
+        [0] = '#f6f8fa',
+        [1] = '#eaeef2',
+        [2] = '#d0d7de',
+        [3] = '#afb8c1',
+        [4] = '#8c959f',
+        [5] = '#6e7781',
+        [6] = '#57606a',
+        [7] = '#424a53',
+        [8] = '#32383f',
+        [9] = '#24292f',
+      }),
+      coral = m({
+        [0] = '#fff0eb',
+        [1] = '#ffd6cc',
+        [2] = '#ffb4a1',
+        [3] = '#fd8c73',
+        [4] = '#ec6547',
+        [5] = '#c4432b',
+        [6] = '#9e2f1c',
+        [7] = '#801f0f',
+        [8] = '#691105',
+        [9] = '#510901',
+      }),
+      black = '#1f2328',
+      pink = m({
+        [0] = '#ffeff7',
+        [1] = '#ffd3eb',
+        [2] = '#ffadda',
+        [3] = '#ff80c8',
+        [4] = '#e85aad',
+        [5] = '#bf3989',
+        [6] = '#99286e',
+        [7] = '#772057',
+        [8] = '#611347',
+        [9] = '#4d0336',
+      }),
+      yellow = m({
+        [0] = '#fff8c5',
+        [1] = '#fae17d',
+        [2] = '#eac54f',
+        [3] = '#d4a72c',
+        [4] = '#bf8700',
+        [5] = '#9a6700',
+        [6] = '#7d4e00',
+        [7] = '#633c01',
+        [8] = '#4d2d00',
+        [9] = '#3b2300',
+      }),
+    }),
+    display = m({
+      color = m({
+        indigo = m({
+          [0] = '#e5e9ff',
+          [1] = '#d2d7fe',
+          [2] = '#b1b9fb',
+          [3] = '#979ff7',
+          [4] = '#7a82f0',
+          [5] = '#5a61e7',
+          [6] = '#494edf',
+          [7] = '#393cd5',
+          [8] = '#2d2db4',
+          [9] = '#25247b',
+        }),
+        white = '#ffffff',
+        teal = m({
+          [0] = '#c7f5ef',
+          [1] = '#89ebe1',
+          [2] = '#22d3c7',
+          [3] = '#1db9b4',
+          [4] = '#179b9b',
+          [5] = '#127e81',
+          [6] = '#106e75',
+          [7] = '#0d5b63',
+          [8] = '#0a4852',
+          [9] = '#073740',
+        }),
+        green = m({
+          [0] = '#caf7ca',
+          [1] = '#9ceda0',
+          [2] = '#54d961',
+          [3] = '#31bf46',
+          [4] = '#30a147',
+          [5] = '#2c8141',
+          [6] = '#2b6e3f',
+          [7] = '#285c3b',
+          [8] = '#254b34',
+          [9] = '#1d3528',
+        }),
+        red = m({
+          [0] = '#ffe2e0',
+          [1] = '#fecdcd',
+          [2] = '#fda5a7',
+          [3] = '#fb8389',
+          [4] = '#f85461',
+          [5] = '#df0c24',
+          [6] = '#c50d28',
+          [7] = '#a60c29',
+          [8] = '#880c27',
+          [9] = '#610a20',
+        }),
+        gray = m({
+          [0] = '#e8ecf2',
+          [1] = '#d2dae4',
+          [2] = '#b4c0cf',
+          [3] = '#9ba9bb',
+          [4] = '#808fa3',
+          [5] = '#647182',
+          [6] = '#5c6570',
+          [7] = '#4e535a',
+          [8] = '#424448',
+          [9] = '#303031',
+        }),
+        purple = m({
+          [0] = '#f1e5ff',
+          [1] = '#e6d2fe',
+          [2] = '#d1b1fc',
+          [3] = '#bc91f8',
+          [4] = '#a672f3',
+          [5] = '#894ceb',
+          [6] = '#783ae4',
+          [7] = '#6223d7',
+          [8] = '#4f21ab',
+          [9] = '#391b79',
+        }),
+        cyan = m({
+          [0] = '#bdf4ff',
+          [1] = '#7ae9ff',
+          [2] = '#00d0fa',
+          [3] = '#00b7db',
+          [4] = '#0099b8',
+          [5] = '#007b94',
+          [6] = '#006a80',
+          [7] = '#00596b',
+          [8] = '#004857',
+          [9] = '#003742',
+        }),
+        plum = m({
+          [0] = '#f8e5ff',
+          [1] = '#f0cdfe',
+          [2] = '#e2a7fb',
+          [3] = '#d487f7',
+          [4] = '#c264f2',
+          [5] = '#a830e8',
+          [6] = '#961edc',
+          [7] = '#7d1eb8',
+          [8] = '#651d96',
+          [9] = '#471769',
+        }),
+        coral = m({
+          [0] = '#ffe5db',
+          [1] = '#fecebe',
+          [2] = '#fcab92',
+          [3] = '#f88768',
+          [4] = '#f25f3a',
+          [5] = '#d43511',
+          [6] = '#ba2e12',
+          [7] = '#9b2712',
+          [8] = '#7e2011',
+          [9] = '#5d180e',
+        }),
+        black = '#0d1117',
+        pink = m({
+          [0] = '#ffe5f1',
+          [1] = '#fdc9e2',
+          [2] = '#f8a5cf',
+          [3] = '#f184bc',
+          [4] = '#e55da5',
+          [5] = '#ce2c85',
+          [6] = '#b12f79',
+          [7] = '#8e2e66',
+          [8] = '#6e2b53',
+          [9] = '#4d233d',
+        }),
+        brown = m({
+          [0] = '#eeeae2',
+          [1] = '#dfd7c8',
+          [2] = '#cbbda4',
+          [3] = '#b8a484',
+          [4] = '#a68b64',
+          [5] = '#856d4c',
+          [6] = '#755f43',
+          [7] = '#64513a',
+          [8] = '#51412f',
+          [9] = '#3a2e22',
+        }),
+        pine = m({
+          [0] = '#bff8db',
+          [1] = '#80efb9',
+          [2] = '#1dd781',
+          [3] = '#1dbf76',
+          [4] = '#1aa267',
+          [5] = '#167e53',
+          [6] = '#156f4b',
+          [7] = '#135d41',
+          [8] = '#114b36',
+          [9] = '#0d3627',
+        }),
+        blue = m({
+          [0] = '#d1f0ff',
+          [1] = '#ade1ff',
+          [2] = '#75c8ff',
+          [3] = '#47afff',
+          [4] = '#0f8fff',
+          [5] = '#006edb',
+          [6] = '#005fcc',
+          [7] = '#004db3',
+          [8] = '#003d99',
+          [9] = '#002b75',
+        }),
+        orange = m({
+          [0] = '#ffe7d1',
+          [1] = '#fecfaa',
+          [2] = '#fbaf74',
+          [3] = '#f68c41',
+          [4] = '#eb670f',
+          [5] = '#b8500f',
+          [6] = '#a24610',
+          [7] = '#8d3c11',
+          [8] = '#70300f',
+          [9] = '#54230d',
+        }),
+        auburn = m({
+          [0] = '#f2e9e9',
+          [1] = '#e6d6d5',
+          [2] = '#d4b7b5',
+          [3] = '#c59e9b',
+          [4] = '#b4827e',
+          [5] = '#9d615c',
+          [6] = '#8a5551',
+          [7] = '#744744',
+          [8] = '#5d3937',
+          [9] = '#432928',
+        }),
+        olive = m({
+          [0] = '#f0f0ad',
+          [1] = '#dbe170',
+          [2] = '#b9c832',
+          [3] = '#9bae32',
+          [4] = '#819532',
+          [5] = '#64762d',
+          [6] = '#56682c',
+          [7] = '#495a2b',
+          [8] = '#3b4927',
+          [9] = '#2a331f',
+        }),
+        lime = m({
+          [0] = '#e3f2b5',
+          [1] = '#c7e580',
+          [2] = '#9bd039',
+          [3] = '#80b530',
+          [4] = '#6c9d2f',
+          [5] = '#527a29',
+          [6] = '#476c28',
+          [7] = '#3a5b25',
+          [8] = '#2f4a21',
+          [9] = '#213319',
+        }),
+        lemon = m({
+          [0] = '#f7eea1',
+          [1] = '#f0db3d',
+          [2] = '#d8bd0e',
+          [3] = '#c2a60a',
+          [4] = '#a68c07',
+          [5] = '#866e04',
+          [6] = '#786002',
+          [7] = '#654f01',
+          [8] = '#523f00',
+          [9] = '#3d2e00',
+        }),
+        yellow = m({
+          [0] = '#ffec9e',
+          [1] = '#ffd642',
+          [2] = '#ebb400',
+          [3] = '#d19d00',
+          [4] = '#b88700',
+          [5] = '#946a00',
+          [6] = '#805900',
+          [7] = '#704d00',
+          [8] = '#5c3d00',
+          [9] = '#422b00',
+        }),
+      }),
+    }),
+  }),
+  button = m({
+    primary = m({
+      fgColor = m({
+        disabled = '#ffffffcc',
+        rest = '#ffffff',
+      }),
+      shadow = m({
+        selected = 'inset 0px 1px 0px 0px #0021554d',
+      }),
+      bgColor = m({
+        rest = '#0f72e3',
+        hover = '#0d6bd8',
+        disabled = '#92caff',
+        active = '#0b64ce',
+      }),
+      borderColor = m({
+        rest = '#1f232826',
+        hover = '#1f232826',
+        disabled = '#92caff',
+        active = '#1f232826',
+      }),
+      iconColor = m({
+        rest = '#ffffffcc',
+      }),
+    }),
+    inactive = m({
+      bgColor = '#eaeef2',
+      fgColor = '#57606a',
+    }),
+    star = m({
+      iconColor = '#eac54f',
+    }),
+    danger = m({
+      fgColor = m({
+        rest = '#be4e02',
+        hover = '#ffffff',
+        disabled = '#be4e0280',
+        active = '#ffffff',
+      }),
+      shadow = m({
+        selected = 'inset 0px 1px 0px 0px #47170033',
+      }),
+      bgColor = m({
+        rest = '#f6f8fa',
+        hover = '#953800',
+        disabled = '#eaeef2b3',
+        active = '#7e2f00',
+      }),
+      borderColor = m({
+        hover = '#1f232826',
+        rest = '#d0d7de',
+        active = '#1f232826',
+      }),
+      iconColor = m({
+        hover = '#ffffff',
+        rest = '#be4e02',
+      }),
+    }),
+    invisible = m({
+      iconColor = m({
+        hover = '#636c76',
+        disabled = '#8c959f',
+        rest = '#636c76',
+      }),
+      bgColor = m({
+        rest = '#ffffff00',
+        hover = '#d0d7de33',
+        disabled = '#eaeef2b3',
+        active = '#d0d7de66',
+      }),
+      borderColor = m({
+        hover = '#ffffff00',
+        disabled = '#eaeef2b3',
+        rest = '#ffffff00',
+      }),
+      fgColor = m({
+        hover = '#0969da',
+        disabled = '#8c959f',
+        rest = '#0969da',
+      }),
+    }),
+    outline = m({
+      shadow = m({
+        selected = 'inset 0px 1px 0px 0px #00215533',
+      }),
+      bgColor = m({
+        rest = '#f6f8fa',
+        hover = '#0969da',
+        disabled = '#f6f8fa',
+        active = '#0757ba',
+      }),
+      borderColor = m({
+        active = '#1f232826',
+        hover = '#1f232826',
+      }),
+      fgColor = m({
+        rest = '#0969da',
+        hover = '#ffffff',
+        disabled = '#0969da80',
+        active = '#ffffff',
+      }),
+    }),
+    default = m({
+      shadow = m({
+        resting = '0px 1px 0px 0px #1f23280a',
+      }),
+      bgColor = m({
+        selected = '#e7ebef',
+        rest = '#f6f8fa',
+        disabled = '#eaeef2b3',
+        hover = '#eef1f4',
+        active = '#e7ebef',
+      }),
+      borderColor = m({
+        rest = '#d0d7de',
+        hover = '#d0d7de',
+        disabled = '#eaeef2b3',
+        active = '#d0d7de',
+      }),
+      fgColor = m({
+        rest = '#24292f',
+      }),
+    }),
+  }),
+  avatarStack = m({
+    fade = m({
+      bgColor = m({
+        default = '#afb8c1',
+        muted = '#d0d7de',
+      }),
+    }),
+  }),
+  avatar = m({
+    shadow = '0px 0px 0px 2px #ffffffcc',
+    bgColor = '#ffffff',
+    borderColor = '#1f232826',
+  }),
+  display = m({
+    indigo = m({
+      bgColor = m({
+        emphasis = '#5a61e7',
+        muted = '#e5e9ff',
+      }),
+      borderColor = m({
+        emphasis = '#5a61e7',
+        muted = '#d2d7fe',
+      }),
+      fgColor = '#494edf',
+    }),
+    teal = m({
+      bgColor = m({
+        emphasis = '#127e81',
+        muted = '#c7f5ef',
+      }),
+      borderColor = m({
+        emphasis = '#127e81',
+        muted = '#89ebe1',
+      }),
+      fgColor = '#106e75',
+    }),
+    green = m({
+      bgColor = m({
+        emphasis = '#2c8141',
+        muted = '#caf7ca',
+      }),
+      borderColor = m({
+        emphasis = '#2c8141',
+        muted = '#9ceda0',
+      }),
+      fgColor = '#2b6e3f',
+    }),
+    red = m({
+      bgColor = m({
+        emphasis = '#df0c24',
+        muted = '#ffe2e0',
+      }),
+      borderColor = m({
+        emphasis = '#df0c24',
+        muted = '#fecdcd',
+      }),
+      fgColor = '#c50d28',
+    }),
+    gray = m({
+      bgColor = m({
+        emphasis = '#647182',
+        muted = '#e8ecf2',
+      }),
+      borderColor = m({
+        emphasis = '#647182',
+        muted = '#d2dae4',
+      }),
+      fgColor = '#5c6570',
+    }),
+    purple = m({
+      bgColor = m({
+        emphasis = '#894ceb',
+        muted = '#f1e5ff',
+      }),
+      borderColor = m({
+        emphasis = '#894ceb',
+        muted = '#e6d2fe',
+      }),
+      fgColor = '#783ae4',
+    }),
+    cyan = m({
+      bgColor = m({
+        emphasis = '#007b94',
+        muted = '#bdf4ff',
+      }),
+      borderColor = m({
+        emphasis = '#007b94',
+        muted = '#7ae9ff',
+      }),
+      fgColor = '#006a80',
+    }),
+    plum = m({
+      bgColor = m({
+        emphasis = '#a830e8',
+        muted = '#f8e5ff',
+      }),
+      borderColor = m({
+        emphasis = '#a830e8',
+        muted = '#f0cdfe',
+      }),
+      fgColor = '#961edc',
+    }),
+    coral = m({
+      bgColor = m({
+        emphasis = '#d43511',
+        muted = '#ffe5db',
+      }),
+      borderColor = m({
+        emphasis = '#d43511',
+        muted = '#fecebe',
+      }),
+      fgColor = '#ba2e12',
+    }),
+    pink = m({
+      bgColor = m({
+        emphasis = '#ce2c85',
+        muted = '#ffe5f1',
+      }),
+      borderColor = m({
+        emphasis = '#ce2c85',
+        muted = '#fdc9e2',
+      }),
+      fgColor = '#b12f79',
+    }),
+    brown = m({
+      bgColor = m({
+        emphasis = '#856d4c',
+        muted = '#eeeae2',
+      }),
+      borderColor = m({
+        emphasis = '#856d4c',
+        muted = '#dfd7c8',
+      }),
+      fgColor = '#755f43',
+    }),
+    pine = m({
+      bgColor = m({
+        emphasis = '#167e53',
+        muted = '#bff8db',
+      }),
+      borderColor = m({
+        emphasis = '#167e53',
+        muted = '#80efb9',
+      }),
+      fgColor = '#156f4b',
+    }),
+    blue = m({
+      bgColor = m({
+        emphasis = '#006edb',
+        muted = '#d1f0ff',
+      }),
+      borderColor = m({
+        emphasis = '#006edb',
+        muted = '#ade1ff',
+      }),
+      fgColor = '#005fcc',
+    }),
+    orange = m({
+      bgColor = m({
+        emphasis = '#b8500f',
+        muted = '#ffe7d1',
+      }),
+      borderColor = m({
+        emphasis = '#b8500f',
+        muted = '#fecfaa',
+      }),
+      fgColor = '#a24610',
+    }),
+    auburn = m({
+      bgColor = m({
+        emphasis = '#9d615c',
+        muted = '#f2e9e9',
+      }),
+      borderColor = m({
+        emphasis = '#9d615c',
+        muted = '#e6d6d5',
+      }),
+      fgColor = '#8a5551',
+    }),
+    olive = m({
+      bgColor = m({
+        emphasis = '#64762d',
+        muted = '#f0f0ad',
+      }),
+      borderColor = m({
+        emphasis = '#64762d',
+        muted = '#dbe170',
+      }),
+      fgColor = '#56682c',
+    }),
+    lime = m({
+      bgColor = m({
+        emphasis = '#527a29',
+        muted = '#e3f2b5',
+      }),
+      borderColor = m({
+        emphasis = '#527a29',
+        muted = '#c7e580',
+      }),
+      fgColor = '#476c28',
+    }),
+    lemon = m({
+      bgColor = m({
+        emphasis = '#866e04',
+        muted = '#f7eea1',
+      }),
+      borderColor = m({
+        emphasis = '#866e04',
+        muted = '#f0db3d',
+      }),
+      fgColor = '#786002',
+    }),
+    yellow = m({
+      bgColor = m({
+        emphasis = '#946a00',
+        muted = '#ffec9e',
+      }),
+      borderColor = m({
+        emphasis = '#946a00',
+        muted = '#ffd642',
+      }),
+      fgColor = '#805900',
+    }),
+  }),
+  underlineNav = m({
+    borderColor = m({
+      active = '#fd8c73',
+      hover = '#afb8c133',
+    }),
+    iconColor = m({
+      rest = '#636c76',
+    }),
+  }),
+  borderColor = m({
+    upsell = m({
+      emphasis = '#8250df',
+      muted = '#c297ff66',
+    }),
+    success = m({
+      emphasis = '#218bff',
+      muted = '#54aeff66',
+    }),
+    translucent = '#1f232826',
+    severe = m({
+      emphasis = '#bc4c00',
+      muted = '#fb8f4466',
+    }),
+    muted = '#d0d7deb3',
+    done = m({
+      emphasis = '#8250df',
+      muted = '#c297ff66',
+    }),
+    disabled = '#eaeef2b3',
+    danger = m({
+      emphasis = '#bc4c00',
+      muted = '#fb8f4466',
+    }),
+    closed = m({
+      emphasis = '#6e7781',
+      muted = '#afb8c166',
+    }),
+    attention = m({
+      emphasis = '#bf8700',
+      muted = '#d4a72c66',
+    }),
+    default = '#d0d7de',
+    emphasis = '#6e7781',
+    neutral = m({
+      emphasis = '#6e7781',
+      muted = '#afb8c133',
+    }),
+    transparent = '#ffffff00',
+    open = m({
+      emphasis = '#e16f24',
+      muted = '#fb8f4466',
+    }),
+    accent = m({
+      emphasis = '#0969da',
+      muted = '#54aeff66',
+    }),
+    sponsors = m({
+      emphasis = '#bf3989',
+      muted = '#ff80c866',
+    }),
+  }),
+  diffBlob = m({
+    deletion = m({
+      bgColor = m({
+        line = '#fff1e580',
+        word = '#ffb77c80',
+        num = '#fb8f4466',
+      }),
+      fgColor = m({
+        text = '#1f2328',
+        num = '#1f2328',
+      }),
+    }),
+    hunk = m({
+      bgColor = m({
+        num = '#54aeff66',
+      }),
+    }),
+    addition = m({
+      bgColor = m({
+        line = '#ddf4ff80',
+        word = '#54aeff66',
+        num = '#54aeff66',
+      }),
+      fgColor = m({
+        text = '#1f2328',
+        num = '#1f2328',
+      }),
+    }),
+    expander = m({
+      iconColor = '#636c76',
+    }),
+  }),
+  treeViewItem = m({
+    leadingVisual = m({
+      iconColor = m({
+        rest = '#54aeff',
+      }),
+    }),
+  }),
+  topicTag = m({
+    borderColor = '#ffffff00',
+  }),
+  timelineBadge = m({
+    bgColor = '#eaeef2',
+  }),
+  bgColor = m({
+    white = '#ffffff',
+    upsell = m({
+      emphasis = '#8250df',
+      muted = '#fbefff',
+    }),
+    success = m({
+      emphasis = '#0f72e3',
+      muted = '#ddf4ff',
+    }),
+    sponsors = m({
+      emphasis = '#bf3989',
+      muted = '#ffeff7',
+    }),
+    severe = m({
+      emphasis = '#bc4c00',
+      muted = '#fff1e5',
+    }),
+    muted = '#f6f8fa',
+    inset = '#f6f8fa',
+    done = m({
+      emphasis = '#8250df',
+      muted = '#fbefff',
+    }),
+    disabled = '#eaeef2b3',
+    danger = m({
+      emphasis = '#bc4c00',
+      muted = '#fff1e5',
+    }),
+    closed = m({
+      emphasis = '#6e7781',
+      muted = '#afb8c166',
+    }),
+    black = '#1f2328',
+    attention = m({
+      emphasis = '#9a6700',
+      muted = '#fff8c5',
+    }),
+    default = '#ffffff',
+    emphasis = '#24292f',
+    inverse = '#24292f',
+    neutral = m({
+      emphasis = '#6e7781',
+      muted = '#afb8c133',
+    }),
+    transparent = '#ffffff00',
+    open = m({
+      emphasis = '#e16f24',
+      muted = '#fb8f4466',
+    }),
+    accent = m({
+      emphasis = '#0969da',
+      muted = '#ddf4ff',
+    }),
+  }),
+  skeletonLoader = m({
+    bgColor = '#f6f8fa',
+  }),
+  sideNav = m({
+    bgColor = m({
+      selected = '#ffffff',
+    }),
+  }),
+  shadow = m({
+    inset = 'inset 0px 1px 0px 0px #1f23280a',
+    resting = m({
+      medium = '0px 3px 6px 0px #424a531f',
+      small = '0px 1px 0px 0px #1f23280a',
+      xsmall = '0px 1px 0px 0px #1f23281a',
+    }),
+    floating = m({
+      xlarge = '0px 0px 0px 1px #d0d7de, 0px 56px 112px 0px #424a5352',
+      legacy = '0px 6px 12px -3px #424a530a, 0px 6px 18px 0px #424a531f',
+      large = '0px 0px 0px 1px #d0d7de, 0px 40px 80px 0px #424a533d',
+      small = '0px 0px 0px 1px #d0d7de80, 0px 6px 12px -3px #424a530a, 0px 6px 18px 0px #424a531f',
+      medium = '0px 0px 0px 1px #d0d7de, 0px 8px 16px -4px #424a5314, 0px 4px 32px -4px #424a5314, 0px 24px 48px -12px #424a5314, 0px 48px 96px -24px #424a5314',
+    }),
+  }),
+  scale = m({
+    white = '#ffffff',
+    blue = m({
+      [1] = '#ddf4ff',
+      [2] = '#b6e3ff',
+      [3] = '#80ccff',
+      [4] = '#54aeff',
+      [5] = '#218bff',
+      [6] = '#0969da',
+      [7] = '#0550ae',
+      [8] = '#033d8b',
+      [9] = '#0a3069',
+      [10] = '#002155',
+    }),
+    green = m({
+      [1] = '#dafbe1',
+      [2] = '#aceebb',
+      [3] = '#6fdd8b',
+      [4] = '#4ac26b',
+      [5] = '#2da44e',
+      [6] = '#1a7f37',
+      [7] = '#116329',
+      [8] = '#044f1e',
+      [9] = '#003d16',
+      [10] = '#002d11',
+    }),
+    orange = m({
+      [1] = '#fff1e5',
+      [2] = '#ffd8b5',
+      [3] = '#ffb77c',
+      [4] = '#fb8f44',
+      [5] = '#e16f24',
+      [6] = '#bc4c00',
+      [7] = '#953800',
+      [8] = '#762c00',
+      [9] = '#5c2200',
+      [10] = '#471700',
+    }),
+    red = m({
+      [1] = '#ffebe9',
+      [2] = '#ffcecb',
+      [3] = '#ffaba8',
+      [4] = '#ff8182',
+      [5] = '#fa4549',
+      [6] = '#cf222e',
+      [7] = '#a40e26',
+      [8] = '#82071e',
+      [9] = '#660018',
+      [10] = '#4c0014',
+    }),
+    purple = m({
+      [1] = '#fbefff',
+      [2] = '#ecd8ff',
+      [3] = '#d8b9ff',
+      [4] = '#c297ff',
+      [5] = '#a475f9',
+      [6] = '#8250df',
+      [7] = '#6639ba',
+      [8] = '#512a97',
+      [9] = '#3e1f79',
+      [10] = '#2e1461',
+    }),
+    transparent = '#ffffff00',
+    neutral = m({
+      [1] = '#f6f8fa',
+      [2] = '#eaeef2',
+      [3] = '#d0d7de',
+      [4] = '#afb8c1',
+      [5] = '#8c959f',
+      [6] = '#6e7781',
+      [7] = '#57606a',
+      [8] = '#424a53',
+      [9] = '#32383f',
+      [10] = '#24292f',
+    }),
+    coral = m({
+      [1] = '#fff0eb',
+      [2] = '#ffd6cc',
+      [3] = '#ffb4a1',
+      [4] = '#fd8c73',
+      [5] = '#ec6547',
+      [6] = '#c4432b',
+      [7] = '#9e2f1c',
+      [8] = '#801f0f',
+      [9] = '#691105',
+      [10] = '#510901',
+    }),
+    black = '#1f2328',
+    pink = m({
+      [1] = '#ffeff7',
+      [2] = '#ffd3eb',
+      [3] = '#ffadda',
+      [4] = '#ff80c8',
+      [5] = '#e85aad',
+      [6] = '#bf3989',
+      [7] = '#99286e',
+      [8] = '#772057',
+      [9] = '#611347',
+      [10] = '#4d0336',
+    }),
+    yellow = m({
+      [1] = '#fff8c5',
+      [2] = '#fae17d',
+      [3] = '#eac54f',
+      [4] = '#d4a72c',
+      [5] = '#bf8700',
+      [6] = '#9a6700',
+      [7] = '#7d4e00',
+      [8] = '#633c01',
+      [9] = '#4d2d00',
+      [10] = '#3b2300',
+    }),
+  }),
+  color = m({
+    ansi = m({
+      white = m({
+        bright = '#8c959f',
+        default = '#6e7781',
+      }),
+      blue = m({
+        bright = '#218bff',
+        default = '#0969da',
+      }),
+      green = m({
+        bright = '#0969da',
+        default = '#0550ae',
+      }),
+      red = m({
+        bright = '#953800',
+        default = '#bc4c00',
+      }),
+      gray = '#6e7781',
+      cyan = m({
+        bright = '#3192aa',
+        default = '#1b7c83',
+      }),
+      magenta = m({
+        bright = '#a475f9',
+        default = '#8250df',
+      }),
+      black = m({
+        bright = '#57606a',
+        default = '#24292f',
+      }),
+      yellow = m({
+        bright = '#633c01',
+        default = '#4d2d00',
+      }),
+    }),
+    prettylights = m({
+      syntax = m({
+        string = m({
+          default = '#0a3069',
+          regexp = '#0550ae',
+        }),
+        carriage = m({
+          ['return'] = m({
+            text = '#f6f8fa',
+            bg = '#bc4c00',
+          }),
+        }),
+        storage = m({
+          modifier = m({
+            import = '#24292f',
+          }),
+        }),
+        brackethighlighter = m({
+          angle = '#57606a',
+          unmatched = '#762c00',
+        }),
+        keyword = '#bc4c00',
+        comment = '#57606a',
+        invalid = m({
+          illegal = m({
+            text = '#f6f8fa',
+            bg = '#762c00',
+          }),
+        }),
+        variable = '#953800',
+        meta = m({
+          diff = m({
+            range = '#8250df',
+          }),
+        }),
+        entity = m({
+          default = '#6639ba',
+          tag = '#0550ae',
+        }),
+        markup = m({
+          ignored = m({
+            text = '#eaeef2',
+            bg = '#0550ae',
+          }),
+          list = '#3b2300',
+          deleted = m({
+            text = '#762c00',
+            bg = '#fff1e5',
+          }),
+          italic = '#24292f',
+          changed = m({
+            text = '#953800',
+            bg = '#ffd8b5',
+          }),
+          inserted = m({
+            text = '#0550ae',
+            bg = '#ddf4ff',
+          }),
+          bold = '#24292f',
+          heading = '#0550ae',
+        }),
+        constant = m({
+          default = '#0550ae',
+          other = m({
+            reference = m({
+              link = '#0a3069',
+            }),
+          }),
+        }),
+        sublimelinter = m({
+          gutter = m({
+            mark = '#8c959f',
+          }),
+        }),
+      }),
+    }),
+  }),
+  data = m({
+    teal = m({
+      color = m({
+        default = '#179b9b',
+        muted = '#c7f5ef',
+      }),
+    }),
+    green = m({
+      color = m({
+        default = '#30a147',
+        muted = '#caf7ca',
+      }),
+    }),
+    orange = m({
+      color = m({
+        default = '#eb670f',
+        muted = '#ffe7d1',
+      }),
+    }),
+    red = m({
+      color = m({
+        default = '#df0c24',
+        muted = '#ffe2e0',
+      }),
+    }),
+    gray = m({
+      color = m({
+        default = '#808fa3',
+        muted = '#e8ecf2',
+      }),
+    }),
+    purple = m({
+      color = m({
+        default = '#894ceb',
+        muted = '#f1e5ff',
+      }),
+    }),
+    auburn = m({
+      color = m({
+        default = '#9d615c',
+        muted = '#f2e9e9',
+      }),
+    }),
+    blue = m({
+      color = m({
+        default = '#006edb',
+        muted = '#d1f0ff',
+      }),
+    }),
+    pink = m({
+      color = m({
+        default = '#ce2c85',
+        muted = '#ffe5f1',
+      }),
+    }),
+    yellow = m({
+      color = m({
+        default = '#b88700',
+        muted = '#ffec9e',
+      }),
+    }),
+  }),
+  codeMirror = m({
+    lines = m({
+      bgColor = '#ffffff',
+    }),
+    matchingBracket = m({
+      fgColor = '#1f2328',
+    }),
+    fgColor = '#1f2328',
+    lineNumber = m({
+      fgColor = '#636c76',
+    }),
+    gutters = m({
+      bgColor = '#ffffff',
+    }),
+    gutterMarker = m({
+      fgColor = m({
+        default = '#ffffff',
+        muted = '#636c76',
+      }),
+    }),
+    cursor = m({
+      fgColor = '#1f2328',
+    }),
+    syntax = m({
+      fgColor = m({
+        comment = '#24292f',
+        string = '#0a3069',
+        variable = '#953800',
+        constant = '#0550ae',
+        storage = '#bc4c00',
+        entity = '#8250df',
+        support = '#0550ae',
+        keyword = '#bc4c00',
+      }),
+    }),
+    bgColor = '#ffffff',
+    selection = m({
+      bgColor = '#54aeff66',
+    }),
+    activeline = m({
+      bgColor = '#afb8c133',
+    }),
+  }),
+  counter = m({
+    borderColor = '#ffffff00',
+  }),
+  selectMenu = m({
+    borderColor = '#ffffff00',
+    bgColor = m({
+      active = '#b6e3ff',
+    }),
+  }),
+  controlTrack = m({
+    bgColor = m({
+      rest = '#eaeef2',
+      hover = '#dee3e8',
+      disabled = '#8c959f',
+      active = '#d2d8de',
+    }),
+    borderColor = m({
+      disabled = '#8c959f',
+      rest = '#ffffff00',
+    }),
+    fgColor = m({
+      disabled = '#ffffff',
+      rest = '#636c76',
+    }),
+  }),
+  label = m({
+    indigo = m({
+      bgColor = m({
+        hover = '#d2d7fe',
+        rest = '#e5e9ff',
+        active = '#b1b9fb',
+      }),
+      fgColor = m({
+        hover = '#393cd5',
+        rest = '#494edf',
+        active = '#2d2db4',
+      }),
+    }),
+    teal = m({
+      bgColor = m({
+        hover = '#89ebe1',
+        rest = '#c7f5ef',
+        active = '#22d3c7',
+      }),
+      fgColor = m({
+        hover = '#0d5b63',
+        rest = '#106e75',
+        active = '#0a4852',
+      }),
+    }),
+    green = m({
+      bgColor = m({
+        hover = '#9ceda0',
+        rest = '#caf7ca',
+        active = '#54d961',
+      }),
+      fgColor = m({
+        hover = '#285c3b',
+        rest = '#2b6e3f',
+        active = '#254b34',
+      }),
+    }),
+    red = m({
+      bgColor = m({
+        hover = '#fecdcd',
+        rest = '#ffe2e0',
+        active = '#fda5a7',
+      }),
+      fgColor = m({
+        hover = '#a60c29',
+        rest = '#c50d28',
+        active = '#880c27',
+      }),
+    }),
+    gray = m({
+      bgColor = m({
+        hover = '#d2dae4',
+        rest = '#e8ecf2',
+        active = '#b4c0cf',
+      }),
+      fgColor = m({
+        hover = '#4e535a',
+        rest = '#5c6570',
+        active = '#424448',
+      }),
+    }),
+    purple = m({
+      bgColor = m({
+        hover = '#e6d2fe',
+        rest = '#f1e5ff',
+        active = '#d1b1fc',
+      }),
+      fgColor = m({
+        hover = '#6223d7',
+        rest = '#783ae4',
+        active = '#4f21ab',
+      }),
+    }),
+    cyan = m({
+      bgColor = m({
+        hover = '#7ae9ff',
+        rest = '#bdf4ff',
+        active = '#00d0fa',
+      }),
+      fgColor = m({
+        hover = '#00596b',
+        rest = '#006a80',
+        active = '#004857',
+      }),
+    }),
+    plum = m({
+      bgColor = m({
+        hover = '#f0cdfe',
+        rest = '#f8e5ff',
+        active = '#e2a7fb',
+      }),
+      fgColor = m({
+        hover = '#7d1eb8',
+        rest = '#961edc',
+        active = '#651d96',
+      }),
+    }),
+    coral = m({
+      bgColor = m({
+        hover = '#fecebe',
+        rest = '#ffe5db',
+        active = '#fcab92',
+      }),
+      fgColor = m({
+        hover = '#9b2712',
+        rest = '#ba2e12',
+        active = '#7e2011',
+      }),
+    }),
+    pink = m({
+      bgColor = m({
+        hover = '#fdc9e2',
+        rest = '#ffe5f1',
+        active = '#f8a5cf',
+      }),
+      fgColor = m({
+        hover = '#8e2e66',
+        rest = '#b12f79',
+        active = '#6e2b53',
+      }),
+    }),
+    brown = m({
+      bgColor = m({
+        hover = '#dfd7c8',
+        rest = '#eeeae2',
+        active = '#cbbda4',
+      }),
+      fgColor = m({
+        hover = '#64513a',
+        rest = '#755f43',
+        active = '#51412f',
+      }),
+    }),
+    pine = m({
+      bgColor = m({
+        hover = '#80efb9',
+        rest = '#bff8db',
+        active = '#1dd781',
+      }),
+      fgColor = m({
+        hover = '#135d41',
+        rest = '#156f4b',
+        active = '#114b36',
+      }),
+    }),
+    blue = m({
+      bgColor = m({
+        hover = '#ade1ff',
+        rest = '#d1f0ff',
+        active = '#75c8ff',
+      }),
+      fgColor = m({
+        hover = '#004db3',
+        rest = '#005fcc',
+        active = '#003d99',
+      }),
+    }),
+    orange = m({
+      bgColor = m({
+        hover = '#fecfaa',
+        rest = '#ffe7d1',
+        active = '#fbaf74',
+      }),
+      fgColor = m({
+        hover = '#8d3c11',
+        rest = '#a24610',
+        active = '#70300f',
+      }),
+    }),
+    auburn = m({
+      bgColor = m({
+        hover = '#e6d6d5',
+        rest = '#f2e9e9',
+        active = '#d4b7b5',
+      }),
+      fgColor = m({
+        hover = '#744744',
+        rest = '#8a5551',
+        active = '#5d3937',
+      }),
+    }),
+    olive = m({
+      bgColor = m({
+        hover = '#dbe170',
+        rest = '#f0f0ad',
+        active = '#b9c832',
+      }),
+      fgColor = m({
+        hover = '#495a2b',
+        rest = '#56682c',
+        active = '#3b4927',
+      }),
+    }),
+    lime = m({
+      bgColor = m({
+        hover = '#c7e580',
+        rest = '#e3f2b5',
+        active = '#9bd039',
+      }),
+      fgColor = m({
+        hover = '#3a5b25',
+        rest = '#476c28',
+        active = '#2f4a21',
+      }),
+    }),
+    lemon = m({
+      bgColor = m({
+        hover = '#f0db3d',
+        rest = '#f7eea1',
+        active = '#d8bd0e',
+      }),
+      fgColor = m({
+        hover = '#654f01',
+        rest = '#786002',
+        active = '#523f00',
+      }),
+    }),
+    yellow = m({
+      bgColor = m({
+        hover = '#ffd642',
+        rest = '#ffec9e',
+        active = '#ebb400',
+      }),
+      fgColor = m({
+        hover = '#704d00',
+        rest = '#805900',
+        active = '#5c3d00',
+      }),
+    }),
+  }),
+  reactionButton = m({
+    selected = m({
+      bgColor = m({
+        hover = '#caecff',
+        rest = '#ddf4ff',
+      }),
+      fgColor = m({
+        hover = '#0550ae',
+        rest = '#0969da',
+      }),
+    }),
+  }),
+  fgColor = m({
+    white = '#ffffff',
+    upsell = '#8250df',
+    success = '#0969da',
+    sponsors = '#bf3989',
+    severe = '#bc4c00',
+    onEmphasis = '#ffffff',
+    muted = '#636c76',
+    link = '#0969da',
+    done = '#8250df',
+    disabled = '#8c959f',
+    danger = '#be4e02',
+    closed = '#6e7781',
+    black = '#1f2328',
+    attention = '#9a6700',
+    default = '#1f2328',
+    neutral = '#6e7781',
+    open = '#bc4c00',
+    accent = '#0969da',
+  }),
+  controlKnob = m({
+    borderColor = m({
+      rest = '#868f99',
+      disabled = '#eaeef2b3',
+      checked = '#0969da',
+    }),
+    bgColor = m({
+      rest = '#ffffff',
+      disabled = '#eaeef2b3',
+      checked = '#ffffff',
+    }),
+  }),
+  overlay = m({
+    bgColor = '#ffffff',
+    borderColor = '#d0d7de80',
+    backdrop = m({
+      bgColor = '#8c959f33',
+    }),
+  }),
+  page = m({
+    header = m({
+      bgColor = '#f6f8fa',
+    }),
+  }),
+  header = m({
+    bgColor = '#24292f',
+    borderColor = m({
+      divider = '#57606a',
+    }),
+    fgColor = m({
+      default = '#ffffffb3',
+      logo = '#ffffff',
+    }),
+  }),
+  control = m({
+    transparent = m({
+      borderColor = m({
+        hover = '#ffffff00',
+        rest = '#ffffff00',
+        active = '#ffffff00',
+      }),
+      bgColor = m({
+        selected = '#d0d7de33',
+        rest = '#ffffff00',
+        disabled = '#eaeef2b3',
+        hover = '#d0d7de33',
+        active = '#d0d7de66',
+      }),
+    }),
+    bgColor = m({
+      selected = '#f6f8fa',
+      rest = '#f6f8fa',
+      disabled = '#eaeef2b3',
+      hover = '#eef1f4',
+      active = '#e7ebef',
+    }),
+    danger = m({
+      bgColor = m({
+        active = '#fff1e566',
+        hover = '#fff1e5',
+      }),
+      fgColor = m({
+        hover = '#be4e02',
+        rest = '#be4e02',
+      }),
+    }),
+    iconColor = m({
+      rest = '#636c76',
+    }),
+    checked = m({
+      bgColor = m({
+        rest = '#0969da',
+        hover = '#0860ca',
+        disabled = '#8c959f',
+        active = '#0757ba',
+      }),
+      borderColor = m({
+        rest = '#0969da',
+        hover = '#0860ca',
+        disabled = '#8c959f',
+        active = '#0757ba',
+      }),
+      fgColor = m({
+        disabled = '#ffffff',
+        rest = '#ffffff',
+      }),
+    }),
+    borderColor = m({
+      selected = '#f6f8fa',
+      rest = '#d0d7de',
+      disabled = '#eaeef2b3',
+      success = '#218bff',
+      warning = '#bf8700',
+      danger = '#bc4c00',
+      emphasis = '#868f99',
+    }),
+    fgColor = m({
+      placeholder = '#69727c',
+      disabled = '#8c959f',
+      rest = '#24292f',
+    }),
+  }),
+  headerSearch = m({
+    borderColor = '#57606a',
+    bgColor = '#24292f',
+  }),
+  selection = m({
+    bgColor = '#0969da33',
+  }),
+  highlight = m({
+    neutral = m({
+      bgColor = '#fff8c5',
+    }),
+  }),
+  menu = m({
+    bgColor = m({
+      active = '#ffffff00',
+    }),
+  }),
+  card = m({
+    bgColor = '#ffffff',
+  }),
+  focus = m({
+    outline = '#0969da solid 2px',
+    outlineColor = '#0969da',
+  }),
+  buttonCounter = m({
+    primary = m({
+      bgColor = m({
+        rest = '#002d1133',
+      }),
+    }),
+    danger = m({
+      bgColor = m({
+        hover = '#ffffff33',
+        disabled = '#bc4c000d',
+        rest = '#bc4c001a',
+      }),
+      fgColor = m({
+        hover = '#ffffff',
+        disabled = '#be4e0280',
+        rest = '#c21c2c',
+      }),
+    }),
+    invisible = m({
+      bgColor = m({
+        rest = '#afb8c133',
+      }),
+    }),
+    outline = m({
+      bgColor = m({
+        hover = '#ffffff33',
+        disabled = '#0969da0d',
+        rest = '#0969da1a',
+      }),
+      fgColor = m({
+        hover = '#ffffff',
+        disabled = '#0969da80',
+        rest = '#0550ae',
+      }),
+    }),
+    default = m({
+      bgColor = m({
+        rest = '#afb8c133',
+      }),
+    }),
+  }),
+})
 M._VERSION =
-  vim.json.decode([=["7.15.6"]=], { luanil = { object = false, array = false } })
+  vim.json.decode([=["8.2.3"]=], { luanil = { object = false, array = false } })
 M._LICENSE = [=[
 The MIT License (MIT)
 

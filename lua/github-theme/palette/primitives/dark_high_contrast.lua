@@ -11,114 +11,242 @@ local function m(tbl)
   return setmetatable(tbl, mt)
 end
 local M = m({
+  selection = m({
+    bgColor = '#5cacffb3',
+  }),
+  selectMenu = m({
+    borderColor = '#7a828e',
+    bgColor = m({
+      active = '#1e60d5',
+    }),
+  }),
+  button = m({
+    inactive = m({
+      bgColor = '#3d424d',
+      fgColor = '#bdc4cc',
+    }),
+    star = m({
+      iconColor = '#f7c843',
+    }),
+    outline = m({
+      shadow = m({
+        selected = '0px 0px 0px 0px #000000',
+      }),
+      bgColor = m({
+        rest = '#ffffff',
+        active = '#2672f3',
+        disabled = '#0a0c10',
+        hover = '#525964',
+      }),
+      borderColor = m({
+        selected = '#ffffff1a',
+        hover = '#ffffff1a',
+      }),
+      fgColor = m({
+        rest = '#5cacff',
+        active = '#ffffff',
+        disabled = '#73b8ff80',
+        hover = '#71b7ff',
+      }),
+    }),
+    invisible = m({
+      borderColor = m({
+        rest = '#00000000',
+        disabled = '#3d424db3',
+        hover = '#7a828e',
+      }),
+      iconColor = m({
+        rest = '#f0f3f6',
+        disabled = '#9ea7b3',
+        hover = '#0a0c10',
+      }),
+      bgColor = m({
+        rest = '#00000000',
+        active = '#d9dee3',
+        disabled = '#3d424db3',
+        hover = '#f0f3f6',
+      }),
+      fgColor = m({
+        rest = '#73b8ff',
+        disabled = '#9ea7b3',
+        hover = '#1e60d5',
+      }),
+    }),
+    danger = m({
+      iconColor = m({
+        hover = '#ffffff',
+        rest = '#ff9492',
+      }),
+      fgColor = m({
+        rest = '#ff9492',
+        active = '#ffffff',
+        disabled = '#ff949280',
+        hover = '#ffffff',
+      }),
+      shadow = m({
+        selected = '0px 0px 0px 0px #000000',
+      }),
+      bgColor = m({
+        rest = '#3d424d',
+        active = '#ff5c5d',
+        disabled = '#3d424db3',
+        hover = '#ff4445',
+      }),
+      borderColor = m({
+        active = '#ffffff1a',
+        rest = '#7a828e',
+        hover = '#ffffff1a',
+      }),
+    }),
+    default = m({
+      shadow = m({
+        resting = '0px 0px 0px 0px #000000',
+      }),
+      bgColor = m({
+        selected = '#393d48',
+        disabled = '#3d424db3',
+        hover = '#494f5a',
+        active = '#393d48',
+        rest = '#3d424d',
+      }),
+      borderColor = m({
+        rest = '#7a828e',
+        active = '#7a828e',
+        disabled = '#3d424db3',
+        hover = '#7a828e',
+      }),
+      fgColor = m({
+        rest = '#f0f3f6',
+      }),
+    }),
+    primary = m({
+      iconColor = m({
+        rest = '#0a0c10',
+      }),
+      fgColor = m({
+        disabled = '#0a0c1080',
+        rest = '#0a0c10',
+      }),
+      shadow = m({
+        selected = '0px 0px 0px 0px #000000',
+      }),
+      bgColor = m({
+        rest = '#0ac740',
+        active = '#16cd47',
+        disabled = '#048f2f',
+        hover = '#10ca43',
+      }),
+      borderColor = m({
+        rest = '#4ae168',
+        active = '#4ae168',
+        disabled = '#4ae16866',
+        hover = '#4ae168',
+      }),
+    }),
+  }),
+  reactionButton = m({
+    selected = m({
+      bgColor = m({
+        hover = '#5dadff5c',
+        rest = '#5cacff33',
+      }),
+      fgColor = m({
+        hover = '#91cbff',
+        rest = '#73b8ff',
+      }),
+    }),
+  }),
+  page = m({
+    header = m({
+      bgColor = '#0a0c10',
+    }),
+  }),
+  header = m({
+    borderColor = m({
+      divider = '#bdc4cc',
+    }),
+    bgColor = '#272b33f2',
+    fgColor = m({
+      logo = '#ffffff',
+      default = '#ffffffb3',
+    }),
+  }),
+  overlay = m({
+    borderColor = '#7a828e',
+    backdrop = m({
+      bgColor = '#272b3366',
+    }),
+    bgColor = '#272b33',
+  }),
   outline = m({
     focus = '#409eff solid 2px',
   }),
   focus = m({
     outlineColor = '#409eff',
   }),
-  menu = m({
-    bgColor = m({
-      active = '#272b33',
-    }),
-  }),
-  label = m({
-    lime = m({
-      bgColor = m({
-        active = '#2c441d',
-        rest = '#141f0f',
-        hover = '#1f3116',
-      }),
-      fgColor = m({
-        active = '#9fcc3e',
-        rest = '#7dae37',
-        hover = '#89ba36',
+  data = m({
+    purple = m({
+      color = m({
+        default = '#975bf1',
+        muted = '#211047',
       }),
     }),
-    lemon = m({
-      bgColor = m({
-        active = '#4f3c02',
-        rest = '#291d00',
-        hover = '#372901',
-      }),
-      fgColor = m({
-        active = '#d7bc1d',
-        rest = '#ba9b12',
-        hover = '#c4a717',
+    pink = m({
+      color = m({
+        default = '#d34591',
+        muted = '#2d1524',
       }),
     }),
     yellow = m({
-      bgColor = m({
-        active = '#5a3702',
-        rest = '#2e1a00',
-        hover = '#3d2401',
-      }),
-      fgColor = m({
-        active = '#edb431',
-        rest = '#d3910d',
-        hover = '#df9e11',
+      color = m({
+        default = '#895906',
+        muted = '#2e1a00',
       }),
     }),
-    indigo = m({
-      bgColor = m({
-        active = '#312c90',
-        rest = '#1b183f',
-        hover = '#25215f',
+    auburn = m({
+      color = m({
+        default = '#a86f6b',
+        muted = '#271817',
       }),
-      fgColor = m({
-        active = '#b7baf6',
-        rest = '#9899ec',
-        hover = '#a2a5f1',
+    }),
+    blue = m({
+      color = m({
+        default = '#0576ff',
+        muted = '#001a47',
       }),
     }),
     teal = m({
-      bgColor = m({
-        active = '#0a464d',
-        rest = '#041f25',
-        hover = '#073036',
-      }),
-      fgColor = m({
-        active = '#24d6c4',
-        rest = '#1cb0ab',
-        hover = '#1fbdb2',
+      color = m({
+        default = '#106c70',
+        muted = '#041f25',
       }),
     }),
     green = m({
-      bgColor = m({
-        active = '#214529',
-        rest = '#122117',
-        hover = '#182f1f',
+      color = m({
+        default = '#2f6f37',
+        muted = '#122117',
       }),
-      fgColor = m({
-        active = '#75d36f',
-        rest = '#41b445',
-        hover = '#46c144',
+    }),
+    orange = m({
+      color = m({
+        default = '#984b10',
+        muted = '#311708',
       }),
     }),
     red = m({
-      bgColor = m({
-        active = '#790c20',
-        rest = '#3c0614',
-        hover = '#58091a',
-      }),
-      fgColor = m({
-        active = '#f7adab',
-        rest = '#f27d83',
-        hover = '#f48b8d',
+      color = m({
+        default = '#eb3342',
+        muted = '#3c0614',
       }),
     }),
     gray = m({
-      bgColor = m({
-        active = '#393d41',
-        rest = '#1c1c1c',
-        hover = '#2a2b2d',
-      }),
-      fgColor = m({
-        active = '#b3c0d1',
-        rest = '#92a1b5',
-        hover = '#9babbf',
+      color = m({
+        default = '#576270',
+        muted = '#1c1c1c',
       }),
     }),
+  }),
+  label = m({
     purple = m({
       bgColor = m({
         active = '#481a9e',
@@ -251,84 +379,100 @@ local M = m({
         hover = '#b2af24',
       }),
     }),
-  }),
-  avatarStack = m({
-    fade = m({
+    lime = m({
       bgColor = m({
-        default = '#525964',
-        muted = '#3d424d',
+        active = '#2c441d',
+        rest = '#141f0f',
+        hover = '#1f3116',
+      }),
+      fgColor = m({
+        active = '#9fcc3e',
+        rest = '#7dae37',
+        hover = '#89ba36',
       }),
     }),
-  }),
-  avatar = m({
-    borderColor = '#ffffffe6',
-    shadow = '0px 0px 0px 2px #0a0c10',
-    bgColor = '#ffffff1a',
-  }),
-  highlight = m({
-    neutral = m({
-      bgColor = '#f0b72f66',
-    }),
-  }),
-  data = m({
-    purple = m({
-      color = m({
-        default = '#975bf1',
-        muted = '#211047',
+    lemon = m({
+      bgColor = m({
+        active = '#4f3c02',
+        rest = '#291d00',
+        hover = '#372901',
       }),
-    }),
-    pink = m({
-      color = m({
-        default = '#d34591',
-        muted = '#2d1524',
+      fgColor = m({
+        active = '#d7bc1d',
+        rest = '#ba9b12',
+        hover = '#c4a717',
       }),
     }),
     yellow = m({
-      color = m({
-        default = '#895906',
-        muted = '#2e1a00',
+      bgColor = m({
+        active = '#5a3702',
+        rest = '#2e1a00',
+        hover = '#3d2401',
+      }),
+      fgColor = m({
+        active = '#edb431',
+        rest = '#d3910d',
+        hover = '#df9e11',
       }),
     }),
-    auburn = m({
-      color = m({
-        default = '#a86f6b',
-        muted = '#271817',
+    indigo = m({
+      bgColor = m({
+        active = '#312c90',
+        rest = '#1b183f',
+        hover = '#25215f',
+      }),
+      fgColor = m({
+        active = '#b7baf6',
+        rest = '#9899ec',
+        hover = '#a2a5f1',
       }),
     }),
     teal = m({
-      color = m({
-        default = '#106c70',
-        muted = '#041f25',
+      bgColor = m({
+        active = '#0a464d',
+        rest = '#041f25',
+        hover = '#073036',
+      }),
+      fgColor = m({
+        active = '#24d6c4',
+        rest = '#1cb0ab',
+        hover = '#1fbdb2',
       }),
     }),
     green = m({
-      color = m({
-        default = '#2f6f37',
-        muted = '#122117',
+      bgColor = m({
+        active = '#214529',
+        rest = '#122117',
+        hover = '#182f1f',
       }),
-    }),
-    orange = m({
-      color = m({
-        default = '#984b10',
-        muted = '#311708',
+      fgColor = m({
+        active = '#75d36f',
+        rest = '#41b445',
+        hover = '#46c144',
       }),
     }),
     red = m({
-      color = m({
-        default = '#eb3342',
-        muted = '#3c0614',
+      bgColor = m({
+        active = '#790c20',
+        rest = '#3c0614',
+        hover = '#58091a',
+      }),
+      fgColor = m({
+        active = '#f7adab',
+        rest = '#f27d83',
+        hover = '#f48b8d',
       }),
     }),
     gray = m({
-      color = m({
-        default = '#576270',
-        muted = '#1c1c1c',
+      bgColor = m({
+        active = '#393d41',
+        rest = '#1c1c1c',
+        hover = '#2a2b2d',
       }),
-    }),
-    blue = m({
-      color = m({
-        default = '#0576ff',
-        muted = '#001a47',
+      fgColor = m({
+        active = '#b3c0d1',
+        rest = '#92a1b5',
+        hover = '#9babbf',
       }),
     }),
   }),
@@ -345,8 +489,8 @@ local M = m({
         line = '#0ac74026',
       }),
       fgColor = m({
-        text = '#0a0c10',
         num = '#fbfcfd',
+        text = '#0a0c10',
       }),
     }),
     expander = m({
@@ -359,220 +503,27 @@ local M = m({
         line = '#ff808026',
       }),
       fgColor = m({
-        text = '#0a0c10',
         num = '#fbfcfd',
+        text = '#0a0c10',
       }),
     }),
   }),
-  display = m({
-    lime = m({
-      borderColor = m({
-        emphasis = '#5f892f',
-        muted = '#1f3116',
-      }),
-      fgColor = '#7dae37',
+  avatarStack = m({
+    fade = m({
       bgColor = m({
-        emphasis = '#5f892f',
-        muted = '#141f0f',
+        default = '#525964',
+        muted = '#3d424d',
       }),
     }),
-    lemon = m({
-      borderColor = m({
-        emphasis = '#977b0c',
-        muted = '#372901',
-      }),
-      fgColor = '#ba9b12',
-      bgColor = m({
-        emphasis = '#977b0c',
-        muted = '#291d00',
-      }),
-    }),
-    yellow = m({
-      borderColor = m({
-        emphasis = '#aa7109',
-        muted = '#3d2401',
-      }),
-      fgColor = '#d3910d',
-      bgColor = m({
-        emphasis = '#aa7109',
-        muted = '#2e1a00',
-      }),
-    }),
-    indigo = m({
-      borderColor = m({
-        emphasis = '#7070e1',
-        muted = '#25215f',
-      }),
-      fgColor = '#9899ec',
-      bgColor = m({
-        emphasis = '#7070e1',
-        muted = '#1b183f',
-      }),
-    }),
-    teal = m({
-      borderColor = m({
-        emphasis = '#158a8a',
-        muted = '#073036',
-      }),
-      fgColor = '#1cb0ab',
-      bgColor = m({
-        emphasis = '#158a8a',
-        muted = '#041f25',
-      }),
-    }),
-    green = m({
-      borderColor = m({
-        emphasis = '#388f3f',
-        muted = '#182f1f',
-      }),
-      fgColor = '#41b445',
-      bgColor = m({
-        emphasis = '#388f3f',
-        muted = '#122117',
-      }),
-    }),
-    red = m({
-      borderColor = m({
-        emphasis = '#eb3342',
-        muted = '#58091a',
-      }),
-      fgColor = '#f27d83',
-      bgColor = m({
-        emphasis = '#eb3342',
-        muted = '#3c0614',
-      }),
-    }),
-    gray = m({
-      borderColor = m({
-        emphasis = '#6e7f96',
-        muted = '#2a2b2d',
-      }),
-      fgColor = '#92a1b5',
-      bgColor = m({
-        emphasis = '#6e7f96',
-        muted = '#1c1c1c',
-      }),
-    }),
-    purple = m({
-      borderColor = m({
-        emphasis = '#975bf1',
-        muted = '#31146b',
-      }),
-      fgColor = '#b687f7',
-      bgColor = m({
-        emphasis = '#975bf1',
-        muted = '#211047',
-      }),
-    }),
-    cyan = m({
-      borderColor = m({
-        emphasis = '#0587b3',
-        muted = '#002e3d',
-      }),
-      fgColor = '#07ace4',
-      bgColor = m({
-        emphasis = '#0587b3',
-        muted = '#001f29',
-      }),
-    }),
-    plum = m({
-      borderColor = m({
-        emphasis = '#b643ef',
-        muted = '#40125e',
-      }),
-      fgColor = '#d07ef7',
-      bgColor = m({
-        emphasis = '#b643ef',
-        muted = '#2a0e3f',
-      }),
-    }),
-    coral = m({
-      borderColor = m({
-        emphasis = '#eb3342',
-        muted = '#58091a',
-      }),
-      fgColor = '#f27d83',
-      bgColor = m({
-        emphasis = '#eb3342',
-        muted = '#3c0614',
-      }),
-    }),
-    pink = m({
-      borderColor = m({
-        emphasis = '#d34591',
-        muted = '#451c35',
-      }),
-      fgColor = '#e57bb2',
-      bgColor = m({
-        emphasis = '#d34591',
-        muted = '#2d1524',
-      }),
-    }),
-    brown = m({
-      borderColor = m({
-        emphasis = '#94774c',
-        muted = '#342a1d',
-      }),
-      fgColor = '#b69a6d',
-      bgColor = m({
-        emphasis = '#94774c',
-        muted = '#241c14',
-      }),
-    }),
-    pine = m({
-      borderColor = m({
-        emphasis = '#18915e',
-        muted = '#0b3224',
-      }),
-      fgColor = '#1bb673',
-      bgColor = m({
-        emphasis = '#18915e',
-        muted = '#082119',
-      }),
-    }),
-    blue = m({
-      borderColor = m({
-        emphasis = '#0576ff',
-        muted = '#002766',
-      }),
-      fgColor = '#4da0ff',
-      bgColor = m({
-        emphasis = '#0576ff',
-        muted = '#001a47',
-      }),
-    }),
-    orange = m({
-      borderColor = m({
-        emphasis = '#c46212',
-        muted = '#43200a',
-      }),
-      fgColor = '#ed8326',
-      bgColor = m({
-        emphasis = '#c46212',
-        muted = '#311708',
-      }),
-    }),
-    auburn = m({
-      borderColor = m({
-        emphasis = '#a86f6b',
-        muted = '#3a2422',
-      }),
-      fgColor = '#bf9592',
-      bgColor = m({
-        emphasis = '#a86f6b',
-        muted = '#271817',
-      }),
-    }),
-    olive = m({
-      borderColor = m({
-        emphasis = '#7a8321',
-        muted = '#252d10',
-      }),
-      fgColor = '#a2a626',
-      bgColor = m({
-        emphasis = '#7a8321',
-        muted = '#171e0b',
-      }),
+  }),
+  avatar = m({
+    shadow = '0px 0px 0px 2px #0a0c10',
+    bgColor = '#ffffff1a',
+    borderColor = '#ffffffe6',
+  }),
+  highlight = m({
+    neutral = m({
+      bgColor = '#f0b72f66',
     }),
   }),
   underlineNav = m({
@@ -584,7 +535,453 @@ local M = m({
       rest = '#f0f3f6',
     }),
   }),
+  display = m({
+    purple = m({
+      borderColor = m({
+        emphasis = '#b687f7',
+        muted = '#31146b',
+      }),
+      bgColor = m({
+        emphasis = '#b687f7',
+        muted = '#211047',
+      }),
+      fgColor = '#d2affd',
+    }),
+    cyan = m({
+      borderColor = m({
+        emphasis = '#07ace4',
+        muted = '#002e3d',
+      }),
+      bgColor = m({
+        emphasis = '#07ace4',
+        muted = '#001f29',
+      }),
+      fgColor = '#45cbf7',
+    }),
+    plum = m({
+      borderColor = m({
+        emphasis = '#d07ef7',
+        muted = '#40125e',
+      }),
+      bgColor = m({
+        emphasis = '#d07ef7',
+        muted = '#2a0e3f',
+      }),
+      fgColor = '#e4a5fd',
+    }),
+    coral = m({
+      borderColor = m({
+        emphasis = '#f7794b',
+        muted = '#58091a',
+      }),
+      bgColor = m({
+        emphasis = '#f7794b',
+        muted = '#3c0614',
+      }),
+      fgColor = '#fdaa86',
+    }),
+    pink = m({
+      borderColor = m({
+        emphasis = '#e57bb2',
+        muted = '#451c35',
+      }),
+      bgColor = m({
+        emphasis = '#e57bb2',
+        muted = '#2d1524',
+      }),
+      fgColor = '#f4a9cd',
+    }),
+    brown = m({
+      borderColor = m({
+        emphasis = '#b69a6d',
+        muted = '#342a1d',
+      }),
+      bgColor = m({
+        emphasis = '#b69a6d',
+        muted = '#241c14',
+      }),
+      fgColor = '#cdbb98',
+    }),
+    pine = m({
+      borderColor = m({
+        emphasis = '#1bb673',
+        muted = '#0b3224',
+      }),
+      bgColor = m({
+        emphasis = '#1bb673',
+        muted = '#082119',
+      }),
+      fgColor = '#1bda81',
+    }),
+    blue = m({
+      borderColor = m({
+        emphasis = '#4da0ff',
+        muted = '#002766',
+      }),
+      bgColor = m({
+        emphasis = '#4da0ff',
+        muted = '#001a47',
+      }),
+      fgColor = '#85c2ff',
+    }),
+    orange = m({
+      borderColor = m({
+        emphasis = '#ed8326',
+        muted = '#43200a',
+      }),
+      bgColor = m({
+        emphasis = '#ed8326',
+        muted = '#311708',
+      }),
+      fgColor = '#f6b06a',
+    }),
+    auburn = m({
+      borderColor = m({
+        emphasis = '#bf9592',
+        muted = '#3a2422',
+      }),
+      bgColor = m({
+        emphasis = '#bf9592',
+        muted = '#271817',
+      }),
+      fgColor = '#d4b7b5',
+    }),
+    olive = m({
+      borderColor = m({
+        emphasis = '#a2a626',
+        muted = '#252d10',
+      }),
+      bgColor = m({
+        emphasis = '#a2a626',
+        muted = '#171e0b',
+      }),
+      fgColor = '#cbc025',
+    }),
+    lime = m({
+      borderColor = m({
+        emphasis = '#7dae37',
+        muted = '#1f3116',
+      }),
+      bgColor = m({
+        emphasis = '#7dae37',
+        muted = '#141f0f',
+      }),
+      fgColor = '#9fcc3e',
+    }),
+    lemon = m({
+      borderColor = m({
+        emphasis = '#ba9b12',
+        muted = '#372901',
+      }),
+      bgColor = m({
+        emphasis = '#ba9b12',
+        muted = '#291d00',
+      }),
+      fgColor = '#d7bc1d',
+    }),
+    yellow = m({
+      borderColor = m({
+        emphasis = '#d3910d',
+        muted = '#3d2401',
+      }),
+      bgColor = m({
+        emphasis = '#d3910d',
+        muted = '#2e1a00',
+      }),
+      fgColor = '#edb431',
+    }),
+    indigo = m({
+      borderColor = m({
+        emphasis = '#9899ec',
+        muted = '#25215f',
+      }),
+      bgColor = m({
+        emphasis = '#9899ec',
+        muted = '#1b183f',
+      }),
+      fgColor = '#b7baf6',
+    }),
+    teal = m({
+      borderColor = m({
+        emphasis = '#1cb0ab',
+        muted = '#073036',
+      }),
+      bgColor = m({
+        emphasis = '#1cb0ab',
+        muted = '#041f25',
+      }),
+      fgColor = '#24d6c4',
+    }),
+    green = m({
+      borderColor = m({
+        emphasis = '#41b445',
+        muted = '#182f1f',
+      }),
+      bgColor = m({
+        emphasis = '#41b445',
+        muted = '#122117',
+      }),
+      fgColor = '#75d36f',
+    }),
+    red = m({
+      borderColor = m({
+        emphasis = '#f27d83',
+        muted = '#58091a',
+      }),
+      bgColor = m({
+        emphasis = '#f27d83',
+        muted = '#3c0614',
+      }),
+      fgColor = '#f7adab',
+    }),
+    gray = m({
+      borderColor = m({
+        emphasis = '#92a1b5',
+        muted = '#2a2b2d',
+      }),
+      bgColor = m({
+        emphasis = '#92a1b5',
+        muted = '#1c1c1c',
+      }),
+      fgColor = '#b3c0d1',
+    }),
+  }),
+  sideNav = m({
+    bgColor = m({
+      selected = '#3d424d',
+    }),
+  }),
+  headerSearch = m({
+    borderColor = '#525964',
+    bgColor = '#0a0c10',
+  }),
+  codeMirror = m({
+    syntax = m({
+      fgColor = m({
+        comment = '#bdc4cc',
+        string = '#addcff',
+        constant = '#91cbff',
+        storage = '#ff9492',
+        entity = '#dbb7ff',
+        support = '#91cbff',
+        variable = '#ffb757',
+        keyword = '#ff9492',
+      }),
+    }),
+    fgColor = '#fbfcfd',
+    bgColor = '#0a0c10',
+    gutters = m({
+      bgColor = '#0a0c10',
+    }),
+    selection = m({
+      bgColor = '#5cacff66',
+    }),
+    gutterMarker = m({
+      fgColor = m({
+        default = '#0a0c10',
+        muted = '#f0f3f6',
+      }),
+    }),
+    cursor = m({
+      fgColor = '#fbfcfd',
+    }),
+    activeline = m({
+      bgColor = '#7a828e1a',
+    }),
+    matchingBracket = m({
+      fgColor = '#fbfcfd',
+    }),
+    lineNumber = m({
+      fgColor = '#f0f3f6',
+    }),
+    lines = m({
+      bgColor = '#0a0c10',
+    }),
+  }),
+  shadow = m({
+    inset = 'inset 0px 1px 0px 0px #0104093d',
+    resting = m({
+      medium = '0px 3px 6px 0px #010409cc',
+      small = '0px 1px 0px 0px #01040966',
+      xsmall = '0px 1px 0px 0px #010409cc',
+    }),
+    floating = m({
+      xlarge = '0px 0px 0px 1px #7a828e, 0px 32px 64px 0px #010409',
+      legacy = '0px 6px 12px -3px #01040966, 0px 6px 18px 0px #01040966',
+      large = '0px 0px 0px 1px #7a828e, 0px 24px 48px 0px #010409',
+      small = '0px 0px 0px 1px #7a828e, 0px 6px 12px -3px #01040966, 0px 6px 18px 0px #01040966',
+      medium = '0px 0px 0px 1px #7a828e, 0px 8px 16px -4px #01040966, 0px 4px 32px -4px #01040966, 0px 24px 48px -12px #01040966, 0px 48px 96px -24px #01040966',
+    }),
+  }),
+  borderColor = m({
+    transparent = '#00000000',
+    done = m({
+      emphasis = '#b87fff',
+      muted = '#bf8fff',
+    }),
+    open = m({
+      emphasis = '#09b43a',
+      muted = '#0ac740',
+    }),
+    translucent = '#7a828e',
+    closed = m({
+      emphasis = '#ff6a69',
+      muted = '#ff808066',
+    }),
+    attention = m({
+      emphasis = '#e09b13',
+      muted = '#edaa27',
+    }),
+    accent = m({
+      emphasis = '#409eff',
+      muted = '#5cacff',
+    }),
+    default = '#7a828e',
+    emphasis = '#9ea7b3',
+    neutral = m({
+      emphasis = '#9ea7b3',
+      muted = '#9ea7b3',
+    }),
+    upsell = m({
+      emphasis = '#b87fff',
+      muted = '#bf8fff66',
+    }),
+    success = m({
+      emphasis = '#09b43a',
+      muted = '#0ac740',
+    }),
+    sponsors = m({
+      emphasis = '#ef6eb1',
+      muted = '#f87cbd',
+    }),
+    severe = m({
+      emphasis = '#e7811d',
+      muted = '#f48b25',
+    }),
+    danger = m({
+      emphasis = '#ff6a69',
+      muted = '#ff8080',
+    }),
+    disabled = '#3d424db3',
+    muted = '#7a828e',
+  }),
+  treeViewItem = m({
+    leadingVisual = m({
+      iconColor = m({
+        rest = '#f0f3f6',
+      }),
+    }),
+  }),
+  counter = m({
+    borderColor = '#00000000',
+  }),
+  topicTag = m({
+    borderColor = '#409eff',
+  }),
+  tooltip = m({
+    bgColor = '#ffffff',
+    fgColor = '#010409',
+  }),
+  fgColor = m({
+    link = '#73b8ff',
+    done = '#cb9eff',
+    open = '#28d751',
+    danger = '#ff9492',
+    closed = '#ff9492',
+    black = '#010409',
+    attention = '#f0b72f',
+    accent = '#73b8ff',
+    default = '#fbfcfd',
+    neutral = '#bdc4cc',
+    disabled = '#9ea7b3',
+    white = '#ffffff',
+    upsell = '#cb9eff',
+    success = '#28d751',
+    sponsors = '#ff8dc7',
+    severe = '#fe9a2d',
+    onInverse = '#010409',
+    onEmphasis = '#0a0c10',
+    muted = '#f0f3f6',
+  }),
+  bgColor = m({
+    transparent = '#00000000',
+    done = m({
+      emphasis = '#bf8fff',
+      muted = '#b87fff17',
+    }),
+    open = m({
+      emphasis = '#0ac740',
+      muted = '#0ac74024',
+    }),
+    danger = m({
+      emphasis = '#ff8080',
+      muted = '#ff808017',
+    }),
+    closed = m({
+      emphasis = '#ff8080',
+      muted = '#ff808017',
+    }),
+    black = '#010409',
+    attention = m({
+      emphasis = '#edaa27',
+      muted = '#edaa2726',
+    }),
+    accent = m({
+      emphasis = '#5cacff',
+      muted = '#409eff1a',
+    }),
+    default = '#0a0c10',
+    emphasis = '#ffffff',
+    neutral = m({
+      emphasis = '#9ea7b3',
+      muted = '#7a828e1a',
+    }),
+    inverse = '#ffffff',
+    white = '#ffffff',
+    upsell = m({
+      emphasis = '#bf8fff',
+      muted = '#b87fff17',
+    }),
+    success = m({
+      emphasis = '#0ac740',
+      muted = '#0ac74024',
+    }),
+    sponsors = m({
+      emphasis = '#f87cbd',
+      muted = '#ef6eb117',
+    }),
+    severe = m({
+      emphasis = '#f48b25',
+      muted = '#f48b2516',
+    }),
+    disabled = '#3d424db3',
+    inset = '#010409',
+    muted = '#191c22',
+  }),
+  timelineBadge = m({
+    bgColor = '#3d424d',
+  }),
+  skeletonLoader = m({
+    bgColor = '#191c22',
+  }),
+  controlTrack = m({
+    borderColor = m({
+      disabled = '#9ea7b3',
+      rest = '#9ea7b3',
+    }),
+    bgColor = m({
+      rest = '#3d424d',
+      active = '#555c67',
+      disabled = '#9ea7b3',
+      hover = '#494f5a',
+    }),
+    fgColor = m({
+      disabled = '#0a0c10',
+      rest = '#fbfcfd',
+    }),
+  }),
   scale = m({
+    transparent = '#00000000',
     purple = m({
       [1] = '#f0dfff',
       [2] = '#e6ccff',
@@ -598,7 +995,6 @@ local M = m({
       [10] = '#6921d7',
     }),
     black = '#010409',
-    transparent = '#00000000',
     pink = m({
       [1] = '#ffdceb',
       [2] = '#ffc7e1',
@@ -623,6 +1019,18 @@ local M = m({
       [8] = '#3d424d',
       [9] = '#272b33',
       [10] = '#0a0c10',
+    }),
+    yellow = m({
+      [1] = '#fbe59e',
+      [2] = '#fbd669',
+      [3] = '#f7c843',
+      [4] = '#f0b72f',
+      [5] = '#edaa27',
+      [6] = '#e09b13',
+      [7] = '#c88508',
+      [8] = '#ae7104',
+      [9] = '#945d02',
+      [10] = '#7b4900',
     }),
     blue = m({
       [1] = '#caeaff',
@@ -672,18 +1080,6 @@ local M = m({
       [9] = '#cc1421',
       [10] = '#ad0116',
     }),
-    yellow = m({
-      [1] = '#fbe59e',
-      [2] = '#fbd669',
-      [3] = '#f7c843',
-      [4] = '#f0b72f',
-      [5] = '#edaa27',
-      [6] = '#e09b13',
-      [7] = '#c88508',
-      [8] = '#ae7104',
-      [9] = '#945d02',
-      [10] = '#7b4900',
-    }),
     coral = m({
       [1] = '#ffded4',
       [2] = '#ffcbb9',
@@ -698,98 +1094,22 @@ local M = m({
     }),
   }),
   color = m({
-    prettylights = m({
-      syntax = m({
-        invalid = m({
-          illegal = m({
-            text = '#ffffff',
-            bg = '#e82a2f',
-          }),
-        }),
-        string = m({
-          regexp = '#72f088',
-          default = '#addcff',
-        }),
-        variable = '#ffb757',
-        entity = m({
-          tag = '#72f088',
-          default = '#dbb7ff',
-        }),
-        constant = m({
-          other = m({
-            reference = m({
-              link = '#addcff',
-            }),
-          }),
-          default = '#91cbff',
-        }),
-        sublimelinter = m({
-          gutter = m({
-            mark = '#7a828e',
-          }),
-        }),
-        comment = '#bdc4cc',
-        carriage = m({
-          ['return'] = m({
-            text = '#ffffff',
-            bg = '#ff4445',
-          }),
-        }),
-        storage = m({
-          modifier = m({
-            import = '#f0f3f6',
-          }),
-        }),
-        meta = m({
-          diff = m({
-            range = '#dbb7ff',
-          }),
-        }),
-        brackethighlighter = m({
-          unmatched = '#ff8080',
-          angle = '#bdc4cc',
-        }),
-        keyword = '#ff9492',
-        markup = m({
-          list = '#fbd669',
-          deleted = m({
-            text = '#ffdedb',
-            bg = '#cc1421',
-          }),
-          italic = '#f0f3f6',
-          changed = m({
-            text = '#ffe1b4',
-            bg = '#a74c00',
-          }),
-          inserted = m({
-            text = '#acf7b6',
-            bg = '#007728',
-          }),
-          bold = '#f0f3f6',
-          heading = '#409eff',
-          ignored = m({
-            text = '#f0f3f6',
-            bg = '#318bf8',
-          }),
-        }),
-      }),
-    }),
     ansi = m({
       cyan = m({
         default = '#39c5cf',
         bright = '#56d4dd',
       }),
-      magenta = m({
-        default = '#cb9eff',
-        bright = '#dbb7ff',
-      }),
       black = m({
         default = '#7a828e',
         bright = '#9ea7b3',
       }),
-      white = m({
-        default = '#d9dee3',
-        bright = '#ffffff',
+      yellow = m({
+        default = '#f0b72f',
+        bright = '#f7c843',
+      }),
+      magenta = m({
+        default = '#cb9eff',
+        bright = '#dbb7ff',
       }),
       blue = m({
         default = '#71b7ff',
@@ -799,19 +1119,96 @@ local M = m({
         default = '#28d751',
         bright = '#4ae168',
       }),
+      white = m({
+        default = '#d9dee3',
+        bright = '#ffffff',
+      }),
       red = m({
         default = '#ff9492',
         bright = '#ffb1af',
       }),
       gray = '#9ea7b3',
-      yellow = m({
-        default = '#f0b72f',
-        bright = '#f7c843',
+    }),
+    prettylights = m({
+      syntax = m({
+        comment = '#bdc4cc',
+        string = m({
+          regexp = '#72f088',
+          default = '#addcff',
+        }),
+        carriage = m({
+          ['return'] = m({
+            bg = '#ff4445',
+            text = '#ffffff',
+          }),
+        }),
+        storage = m({
+          modifier = m({
+            import = '#f0f3f6',
+          }),
+        }),
+        brackethighlighter = m({
+          unmatched = '#ff8080',
+          angle = '#bdc4cc',
+        }),
+        keyword = '#ff9492',
+        invalid = m({
+          illegal = m({
+            bg = '#e82a2f',
+            text = '#ffffff',
+          }),
+        }),
+        markup = m({
+          list = '#fbd669',
+          deleted = m({
+            bg = '#cc1421',
+            text = '#ffdedb',
+          }),
+          italic = '#f0f3f6',
+          changed = m({
+            bg = '#a74c00',
+            text = '#ffe1b4',
+          }),
+          inserted = m({
+            bg = '#007728',
+            text = '#acf7b6',
+          }),
+          bold = '#f0f3f6',
+          heading = '#409eff',
+          ignored = m({
+            bg = '#318bf8',
+            text = '#f0f3f6',
+          }),
+        }),
+        entity = m({
+          tag = '#72f088',
+          default = '#dbb7ff',
+        }),
+        sublimelinter = m({
+          gutter = m({
+            mark = '#7a828e',
+          }),
+        }),
+        constant = m({
+          other = m({
+            reference = m({
+              link = '#addcff',
+            }),
+          }),
+          default = '#91cbff',
+        }),
+        variable = '#ffb757',
+        meta = m({
+          diff = m({
+            range = '#dbb7ff',
+          }),
+        }),
       }),
     }),
   }),
   base = m({
     color = m({
+      transparent = '#00000000',
       purple = m({
         [0] = '#f0dfff',
         [1] = '#e6ccff',
@@ -824,21 +1221,6 @@ local M = m({
         [8] = '#8031f7',
         [9] = '#6921d7',
       }),
-      black = '#010409',
-      transparent = '#00000000',
-      pink = m({
-        [0] = '#ffdceb',
-        [1] = '#ffc7e1',
-        [2] = '#ffadd4',
-        [3] = '#ff8dc7',
-        [4] = '#f87cbd',
-        [5] = '#ef6eb1',
-        [6] = '#e456a3',
-        [7] = '#d23d91',
-        [8] = '#b72c7d',
-        [9] = '#9c1d6a',
-      }),
-      white = '#ffffff',
       coral = m({
         [0] = '#ffded4',
         [1] = '#ffcbb9',
@@ -851,6 +1233,32 @@ local M = m({
         [8] = '#c62612',
         [9] = '#a91500',
       }),
+      pink = m({
+        [0] = '#ffdceb',
+        [1] = '#ffc7e1',
+        [2] = '#ffadd4',
+        [3] = '#ff8dc7',
+        [4] = '#f87cbd',
+        [5] = '#ef6eb1',
+        [6] = '#e456a3',
+        [7] = '#d23d91',
+        [8] = '#b72c7d',
+        [9] = '#9c1d6a',
+      }),
+      yellow = m({
+        [0] = '#fbe59e',
+        [1] = '#fbd669',
+        [2] = '#f7c843',
+        [3] = '#f0b72f',
+        [4] = '#edaa27',
+        [5] = '#e09b13',
+        [6] = '#c88508',
+        [7] = '#ae7104',
+        [8] = '#945d02',
+        [9] = '#7b4900',
+      }),
+      black = '#010409',
+      white = '#ffffff',
       blue = m({
         [0] = '#caeaff',
         [1] = '#addcff',
@@ -899,18 +1307,6 @@ local M = m({
         [8] = '#cc1421',
         [9] = '#ad0116',
       }),
-      yellow = m({
-        [0] = '#fbe59e',
-        [1] = '#fbd669',
-        [2] = '#f7c843',
-        [3] = '#f0b72f',
-        [4] = '#edaa27',
-        [5] = '#e09b13',
-        [6] = '#c88508',
-        [7] = '#ae7104',
-        [8] = '#945d02',
-        [9] = '#7b4900',
-      }),
       neutral = m({
         [0] = '#ffffff',
         [1] = '#f0f3f6',
@@ -926,102 +1322,6 @@ local M = m({
     }),
     display = m({
       color = m({
-        lime = m({
-          [0] = '#141f0f',
-          [1] = '#1f3116',
-          [2] = '#2c441d',
-          [3] = '#375421',
-          [4] = '#496c28',
-          [5] = '#5f892f',
-          [6] = '#7dae37',
-          [7] = '#89ba36',
-          [8] = '#9fcc3e',
-          [9] = '#bcda67',
-        }),
-        lemon = m({
-          [0] = '#291d00',
-          [1] = '#372901',
-          [2] = '#4f3c02',
-          [3] = '#614c05',
-          [4] = '#786008',
-          [5] = '#977b0c',
-          [6] = '#ba9b12',
-          [7] = '#c4a717',
-          [8] = '#d7bc1d',
-          [9] = '#e3d04f',
-        }),
-        yellow = m({
-          [0] = '#2e1a00',
-          [1] = '#3d2401',
-          [2] = '#5a3702',
-          [3] = '#6d4403',
-          [4] = '#895906',
-          [5] = '#aa7109',
-          [6] = '#d3910d',
-          [7] = '#df9e11',
-          [8] = '#edb431',
-          [9] = '#f0ca6a',
-        }),
-        indigo = m({
-          [0] = '#1b183f',
-          [1] = '#25215f',
-          [2] = '#312c90',
-          [3] = '#3935c0',
-          [4] = '#514ed4',
-          [5] = '#7070e1',
-          [6] = '#9899ec',
-          [7] = '#a2a5f1',
-          [8] = '#b7baf6',
-          [9] = '#c8cbf9',
-        }),
-        teal = m({
-          [0] = '#041f25',
-          [1] = '#073036',
-          [2] = '#0a464d',
-          [3] = '#0c555a',
-          [4] = '#106c70',
-          [5] = '#158a8a',
-          [6] = '#1cb0ab',
-          [7] = '#1fbdb2',
-          [8] = '#24d6c4',
-          [9] = '#5fe3d1',
-        }),
-        green = m({
-          [0] = '#122117',
-          [1] = '#182f1f',
-          [2] = '#214529',
-          [3] = '#285830',
-          [4] = '#2f6f37',
-          [5] = '#388f3f',
-          [6] = '#41b445',
-          [7] = '#46c144',
-          [8] = '#75d36f',
-          [9] = '#99e090',
-        }),
-        red = m({
-          [0] = '#3c0614',
-          [1] = '#58091a',
-          [2] = '#790c20',
-          [3] = '#990f24',
-          [4] = '#c31328',
-          [5] = '#eb3342',
-          [6] = '#f27d83',
-          [7] = '#f48b8d',
-          [8] = '#f7adab',
-          [9] = '#f9c1be',
-        }),
-        gray = m({
-          [0] = '#1c1c1c',
-          [1] = '#2a2b2d',
-          [2] = '#393d41',
-          [3] = '#474e57',
-          [4] = '#576270',
-          [5] = '#6e7f96',
-          [6] = '#92a1b5',
-          [7] = '#9babbf',
-          [8] = '#b3c0d1',
-          [9] = '#c4cfde',
-        }),
         purple = m({
           [0] = '#211047',
           [1] = '#31146b',
@@ -1118,7 +1418,6 @@ local M = m({
           [8] = '#85c2ff',
           [9] = '#a3d3ff',
         }),
-        black = '#0d1117',
         orange = m({
           [0] = '#311708',
           [1] = '#43200a',
@@ -1143,7 +1442,6 @@ local M = m({
           [8] = '#d4b7b5',
           [9] = '#dfcac8',
         }),
-        white = '#ffffff',
         olive = m({
           [0] = '#171e0b',
           [1] = '#252d10',
@@ -1156,376 +1454,169 @@ local M = m({
           [8] = '#cbc025',
           [9] = '#e2d04b',
         }),
-      }),
-    }),
-  }),
-  borderColor = m({
-    neutral = m({
-      emphasis = '#9ea7b3',
-      muted = '#9ea7b3',
-    }),
-    translucent = '#7a828e',
-    upsell = m({
-      emphasis = '#b87fff',
-      muted = '#bf8fff66',
-    }),
-    success = m({
-      emphasis = '#09b43a',
-      muted = '#0ac740',
-    }),
-    default = '#7a828e',
-    severe = m({
-      emphasis = '#e7811d',
-      muted = '#f48b25',
-    }),
-    muted = '#7a828e',
-    done = m({
-      emphasis = '#b87fff',
-      muted = '#bf8fff',
-    }),
-    disabled = '#3d424db3',
-    open = m({
-      emphasis = '#09b43a',
-      muted = '#0ac740',
-    }),
-    closed = m({
-      emphasis = '#ff6a69',
-      muted = '#ff808066',
-    }),
-    attention = m({
-      emphasis = '#e09b13',
-      muted = '#edaa27',
-    }),
-    accent = m({
-      emphasis = '#409eff',
-      muted = '#5cacff',
-    }),
-    emphasis = '#7a828e',
-    sponsors = m({
-      emphasis = '#ef6eb1',
-      muted = '#f87cbd',
-    }),
-    danger = m({
-      emphasis = '#ff6a69',
-      muted = '#ff8080',
-    }),
-    transparent = '#00000000',
-  }),
-  treeViewItem = m({
-    leadingVisual = m({
-      iconColor = m({
-        rest = '#f0f3f6',
-      }),
-    }),
-  }),
-  topicTag = m({
-    borderColor = '#409eff',
-  }),
-  timelineBadge = m({
-    bgColor = '#3d424d',
-  }),
-  bgColor = m({
-    neutral = m({
-      emphasis = '#9ea7b3',
-      muted = '#9ea7b366',
-    }),
-    white = '#ffffff',
-    upsell = m({
-      emphasis = '#b87fff',
-      muted = '#bf8fff26',
-    }),
-    success = m({
-      emphasis = '#09b43a',
-      muted = '#0ac74026',
-    }),
-    default = '#0a0c10',
-    severe = m({
-      emphasis = '#e7811d',
-      muted = '#f48b251a',
-    }),
-    muted = '#272b33',
-    inset = '#010409',
-    done = m({
-      emphasis = '#b87fff',
-      muted = '#bf8fff26',
-    }),
-    disabled = '#3d424db3',
-    open = m({
-      emphasis = '#09b43a',
-      muted = '#0ac7401a',
-    }),
-    closed = m({
-      emphasis = '#ff6a69',
-      muted = '#ff808026',
-    }),
-    black = '#010409',
-    transparent = '#00000000',
-    accent = m({
-      emphasis = '#409eff',
-      muted = '#5cacff1a',
-    }),
-    inverse = '#ffffff',
-    emphasis = '#ffffff',
-    attention = m({
-      emphasis = '#e09b13',
-      muted = '#edaa2726',
-    }),
-    sponsors = m({
-      emphasis = '#ef6eb1',
-      muted = '#f87cbd1a',
-    }),
-    danger = m({
-      emphasis = '#ff6a69',
-      muted = '#ff80801a',
-    }),
-  }),
-  codeMirror = m({
-    cursor = m({
-      fgColor = '#fbfcfd',
-    }),
-    syntax = m({
-      fgColor = m({
-        comment = '#bdc4cc',
-        string = '#addcff',
-        variable = '#ffb757',
-        storage = '#ff9492',
-        constant = '#91cbff',
-        support = '#91cbff',
-        keyword = '#ff9492',
-        entity = '#dbb7ff',
-      }),
-    }),
-    selection = m({
-      bgColor = '#5cacff66',
-    }),
-    matchingBracket = m({
-      fgColor = '#fbfcfd',
-    }),
-    fgColor = '#fbfcfd',
-    activeline = m({
-      bgColor = '#9ea7b366',
-    }),
-    lineNumber = m({
-      fgColor = '#f0f3f6',
-    }),
-    bgColor = '#0a0c10',
-    gutters = m({
-      bgColor = '#0a0c10',
-    }),
-    lines = m({
-      bgColor = '#0a0c10',
-    }),
-    gutterMarker = m({
-      fgColor = m({
-        default = '#0a0c10',
-        muted = '#f0f3f6',
-      }),
-    }),
-  }),
-  sideNav = m({
-    bgColor = m({
-      selected = '#3d424d',
-    }),
-  }),
-  counter = m({
-    borderColor = '#00000000',
-  }),
-  shadow = m({
-    floating = m({
-      xlarge = '0px 0px 0px 1px #7a828e, 0px 32px 64px 0px #010409',
-      legacy = '0px 6px 12px -3px #01040966, 0px 6px 18px 0px #01040966',
-      large = '0px 0px 0px 1px #7a828e, 0px 24px 48px 0px #010409',
-      small = '0px 0px 0px 1px #7a828e, 0px 6px 12px -3px #01040966, 0px 6px 18px 0px #01040966',
-      medium = '0px 0px 0px 1px #7a828e, 0px 8px 16px -4px #01040966, 0px 4px 32px -4px #01040966, 0px 24px 48px -12px #01040966, 0px 48px 96px -24px #01040966',
-    }),
-    inset = 'inset 0px 1px 0px 0px #0104093d',
-    resting = m({
-      small = '0px 1px 0px 0px #01040966',
-      xsmall = '0px 1px 0px 0px #010409cc',
-      medium = '0px 3px 6px 0px #010409cc',
-    }),
-  }),
-  controlTrack = m({
-    borderColor = m({
-      disabled = '#9ea7b3',
-      rest = '#00000000',
-    }),
-    fgColor = m({
-      disabled = '#0a0c10',
-      rest = '#fbfcfd',
-    }),
-    bgColor = m({
-      disabled = '#9ea7b3',
-      active = '#555c67',
-      rest = '#3d424d',
-      hover = '#494f5a',
-    }),
-  }),
-  button = m({
-    outline = m({
-      borderColor = m({
-        selected = '#ffffff1a',
-        hover = '#ffffff1a',
-      }),
-      fgColor = m({
-        disabled = '#60aeff80',
-        active = '#ffffff',
-        rest = '#5cacff',
-        hover = '#71b7ff',
-      }),
-      shadow = m({
-        selected = '0px 0px 0px 0px #000000',
-      }),
-      bgColor = m({
-        disabled = '#0a0c10',
-        active = '#2672f3',
-        rest = '#ffffff',
-        hover = '#525964',
-      }),
-    }),
-    default = m({
-      borderColor = m({
-        disabled = '#3d424db3',
-        active = '#7a828e',
-        rest = '#7a828e',
-        hover = '#7a828e',
-      }),
-      fgColor = m({
-        rest = '#f0f3f6',
-      }),
-      shadow = m({
-        resting = '0px 0px 0px 0px #000000',
-      }),
-      bgColor = m({
-        disabled = '#3d424db3',
-        hover = '#494f5a',
-        active = '#555c67',
-        selected = '#555c67',
-        rest = '#3d424d',
-      }),
-    }),
-    danger = m({
-      iconColor = m({
-        hover = '#ffffff',
-        rest = '#ff8080',
-      }),
-      shadow = m({
-        selected = '0px 0px 0px 0px #000000',
-      }),
-      bgColor = m({
-        disabled = '#3d424db3',
-        active = '#ff5c5d',
-        rest = '#3d424d',
-        hover = '#ff4445',
-      }),
-      borderColor = m({
-        active = '#ffffff1a',
-        rest = '#7a828e',
-        hover = '#ffffff1a',
-      }),
-      fgColor = m({
-        disabled = '#ff808080',
-        active = '#ffffff',
-        rest = '#ff9492',
-        hover = '#ffffff',
-      }),
-    }),
-    inactive = m({
-      bgColor = '#3d424d',
-      fgColor = '#bdc4cc',
-    }),
-    star = m({
-      iconColor = '#f7c843',
-    }),
-    primary = m({
-      iconColor = m({
-        rest = '#0a0c10',
-      }),
-      shadow = m({
-        selected = '0px 0px 0px 0px #000000',
-      }),
-      bgColor = m({
-        disabled = '#048f2f',
-        active = '#15c243',
-        rest = '#09b43a',
-        hover = '#0fbb3f',
-      }),
-      borderColor = m({
-        disabled = '#4ae16866',
-        active = '#4ae168',
-        rest = '#4ae168',
-        hover = '#4ae168',
-      }),
-      fgColor = m({
-        disabled = '#0a0c1080',
-        rest = '#0a0c10',
-      }),
-    }),
-    invisible = m({
-      borderColor = m({
-        disabled = '#3d424db3',
-        rest = '#00000000',
-        hover = '#7a828e',
-      }),
-      fgColor = m({
-        disabled = '#9ea7b3',
-        rest = '#60aeff',
-        hover = '#1e60d5',
-      }),
-      iconColor = m({
-        disabled = '#9ea7b3',
-        rest = '#f0f3f6',
-        hover = '#0a0c10',
-      }),
-      bgColor = m({
-        disabled = '#3d424db3',
-        active = '#d9dee3',
-        rest = '#00000000',
-        hover = '#f0f3f6',
+        lime = m({
+          [0] = '#141f0f',
+          [1] = '#1f3116',
+          [2] = '#2c441d',
+          [3] = '#375421',
+          [4] = '#496c28',
+          [5] = '#5f892f',
+          [6] = '#7dae37',
+          [7] = '#89ba36',
+          [8] = '#9fcc3e',
+          [9] = '#bcda67',
+        }),
+        lemon = m({
+          [0] = '#291d00',
+          [1] = '#372901',
+          [2] = '#4f3c02',
+          [3] = '#614c05',
+          [4] = '#786008',
+          [5] = '#977b0c',
+          [6] = '#ba9b12',
+          [7] = '#c4a717',
+          [8] = '#d7bc1d',
+          [9] = '#e3d04f',
+        }),
+        white = '#ffffff',
+        indigo = m({
+          [0] = '#1b183f',
+          [1] = '#25215f',
+          [2] = '#312c90',
+          [3] = '#3935c0',
+          [4] = '#514ed4',
+          [5] = '#7070e1',
+          [6] = '#9899ec',
+          [7] = '#a2a5f1',
+          [8] = '#b7baf6',
+          [9] = '#c8cbf9',
+        }),
+        black = '#0d1117',
+        teal = m({
+          [0] = '#041f25',
+          [1] = '#073036',
+          [2] = '#0a464d',
+          [3] = '#0c555a',
+          [4] = '#106c70',
+          [5] = '#158a8a',
+          [6] = '#1cb0ab',
+          [7] = '#1fbdb2',
+          [8] = '#24d6c4',
+          [9] = '#5fe3d1',
+        }),
+        green = m({
+          [0] = '#122117',
+          [1] = '#182f1f',
+          [2] = '#214529',
+          [3] = '#285830',
+          [4] = '#2f6f37',
+          [5] = '#388f3f',
+          [6] = '#41b445',
+          [7] = '#46c144',
+          [8] = '#75d36f',
+          [9] = '#99e090',
+        }),
+        yellow = m({
+          [0] = '#2e1a00',
+          [1] = '#3d2401',
+          [2] = '#5a3702',
+          [3] = '#6d4403',
+          [4] = '#895906',
+          [5] = '#aa7109',
+          [6] = '#d3910d',
+          [7] = '#df9e11',
+          [8] = '#edb431',
+          [9] = '#f0ca6a',
+        }),
+        red = m({
+          [0] = '#3c0614',
+          [1] = '#58091a',
+          [2] = '#790c20',
+          [3] = '#990f24',
+          [4] = '#c31328',
+          [5] = '#eb3342',
+          [6] = '#f27d83',
+          [7] = '#f48b8d',
+          [8] = '#f7adab',
+          [9] = '#f9c1be',
+        }),
+        gray = m({
+          [0] = '#1c1c1c',
+          [1] = '#2a2b2d',
+          [2] = '#393d41',
+          [3] = '#474e57',
+          [4] = '#576270',
+          [5] = '#6e7f96',
+          [6] = '#92a1b5',
+          [7] = '#9babbf',
+          [8] = '#b3c0d1',
+          [9] = '#c4cfde',
+        }),
       }),
     }),
   }),
   controlKnob = m({
     borderColor = m({
+      checked = '#5cacff',
       disabled = '#3d424db3',
-      checked = '#409eff',
-      rest = '#7a828e',
+      rest = '#9ea7b3',
     }),
     bgColor = m({
-      disabled = '#3d424db3',
       checked = '#ffffff',
+      disabled = '#3d424db3',
       rest = '#010409',
     }),
   }),
-  control = m({
-    checked = m({
-      borderColor = m({
-        disabled = '#9ea7b3',
-        active = '#54a8ff',
-        rest = '#409eff',
-        hover = '#4aa3ff',
+  card = m({
+    bgColor = '#191c22',
+  }),
+  menu = m({
+    bgColor = m({
+      active = '#272b33',
+    }),
+  }),
+  buttonCounter = m({
+    default = m({
+      bgColor = m({
+        rest = '#525964',
+      }),
+    }),
+    outline = m({
+      bgColor = m({
+        rest = '#194fb133',
+        disabled = '#5cacff0d',
+        hover = '#194fb133',
       }),
       fgColor = m({
-        disabled = '#010409',
-        rest = '#0a0c10',
+        rest = '#5cacff',
+        disabled = '#73b8ff80',
+        hover = '#71b7ff',
       }),
+    }),
+    invisible = m({
       bgColor = m({
-        disabled = '#9ea7b3',
-        active = '#54a8ff',
-        rest = '#409eff',
-        hover = '#4aa3ff',
+        rest = '#525964',
       }),
     }),
-    iconColor = m({
-      rest = '#f0f3f6',
+    danger = m({
+      bgColor = m({
+        rest = '#01040926',
+        disabled = '#ff80800d',
+        hover = '#01040926',
+      }),
+      fgColor = m({
+        rest = '#ff9492',
+        disabled = '#ff949280',
+        hover = '#ffffff',
+      }),
     }),
-    bgColor = m({
-      disabled = '#3d424db3',
-      hover = '#494f5a',
-      active = '#555c67',
-      selected = '#525964',
-      rest = '#3d424d',
+    primary = m({
+      bgColor = m({
+        rest = '#01040926',
+      }),
     }),
+  }),
+  control = m({
     transparent = m({
       borderColor = m({
         active = '#9ea7b3',
@@ -1533,155 +1624,69 @@ local M = m({
         hover = '#7a828e',
       }),
       bgColor = m({
+        selected = '#525964',
         disabled = '#3d424db3',
         hover = '#272b33',
         active = '#525964',
-        selected = '#525964',
         rest = '#00000000',
       }),
     }),
-    borderColor = m({
-      disabled = '#3d424db3',
-      success = '#09b43a',
-      danger = '#ff6a69',
-      emphasis = '#7a828e',
-      warning = '#e09b13',
-      selected = '#ffffff',
-      rest = '#7a828e',
-    }),
-    fgColor = m({
-      placeholder = '#b7bec7',
-      disabled = '#9ea7b3',
+    iconColor = m({
       rest = '#f0f3f6',
     }),
     danger = m({
       bgColor = m({
-        active = '#f65052',
-        hover = '#ff6a69',
+        active = '#f65e60',
+        hover = '#ff8080',
       }),
       fgColor = m({
         hover = '#0a0c10',
-        rest = '#ff8080',
+        rest = '#ff9492',
       }),
     }),
-  }),
-  card = m({
-    bgColor = '#272b33',
-  }),
-  selectMenu = m({
-    borderColor = '#7a828e',
-    bgColor = m({
-      active = '#1e60d5',
-    }),
-  }),
-  buttonCounter = m({
-    outline = m({
-      bgColor = m({
-        disabled = '#409eff0d',
-        rest = '#194fb133',
-        hover = '#194fb133',
-      }),
-      fgColor = m({
-        disabled = '#60aeff80',
+    checked = m({
+      borderColor = m({
         rest = '#5cacff',
-        hover = '#71b7ff',
+        active = '#64b0ff',
+        disabled = '#9ea7b3',
+        hover = '#60aeff',
       }),
-    }),
-    default = m({
       bgColor = m({
-        rest = '#525964',
-      }),
-    }),
-    danger = m({
-      bgColor = m({
-        disabled = '#ff6a690d',
-        rest = '#01040926',
-        hover = '#01040926',
+        rest = '#5cacff',
+        active = '#64b0ff',
+        disabled = '#9ea7b3',
+        hover = '#60aeff',
       }),
       fgColor = m({
-        disabled = '#ff808080',
-        rest = '#ff8080',
-        hover = '#ffffff',
+        disabled = '#010409',
+        rest = '#0a0c10',
       }),
     }),
-    primary = m({
-      bgColor = m({
-        rest = '#01040926',
-      }),
+    bgColor = m({
+      selected = '#272b33',
+      disabled = '#3d424db3',
+      hover = '#494f5a',
+      active = '#393d48',
+      rest = '#3d424d',
     }),
-    invisible = m({
-      bgColor = m({
-        rest = '#525964',
-      }),
-    }),
-  }),
-  reactionButton = m({
-    selected = m({
-      bgColor = m({
-        hover = '#5dadff5c',
-        rest = '#5cacff33',
-      }),
-      fgColor = m({
-        hover = '#91cbff',
-        rest = '#60aeff',
-      }),
-    }),
-  }),
-  fgColor = m({
-    neutral = '#9ea7b3',
-    white = '#ffffff',
-    upsell = '#bf8fff',
-    success = '#28d751',
-    default = '#fbfcfd',
-    severe = '#f48b25',
-    onEmphasis = '#0a0c10',
-    muted = '#f0f3f6',
-    link = '#60aeff',
-    done = '#bf8fff',
-    disabled = '#9ea7b3',
-    open = '#28d751',
-    closed = '#ff8080',
-    black = '#010409',
-    attention = '#f0b72f',
-    accent = '#60aeff',
-    sponsors = '#f87cbd',
-    danger = '#ff8080',
-  }),
-  selection = m({
-    bgColor = '#409effb3',
-  }),
-  skeletonLoader = m({
-    bgColor = '#272b33',
-  }),
-  page = m({
-    header = m({
-      bgColor = '#0a0c10',
-    }),
-  }),
-  header = m({
     borderColor = m({
-      divider = '#bdc4cc',
+      selected = '#ffffff',
+      success = '#09b43a',
+      warning = '#e09b13',
+      danger = '#ff6a69',
+      disabled = '#3d424db3',
+      emphasis = '#9ea7b3',
+      rest = '#7a828e',
     }),
     fgColor = m({
-      default = '#ffffffb3',
-      logo = '#ffffff',
+      placeholder = '#e4e9ed',
+      disabled = '#9ea7b3',
+      rest = '#f0f3f6',
     }),
-    bgColor = '#272b33f2',
-  }),
-  overlay = m({
-    borderColor = '#7a828e',
-    backdrop = m({
-      bgColor = '#272b3366',
-    }),
-    bgColor = '#272b33',
-  }),
-  headerSearch = m({
-    borderColor = '#525964',
-    bgColor = '#0a0c10',
   }),
 })
 M._VERSION =
-  vim.json.decode([=["8.2.3"]=], { luanil = { object = false, array = false } })
+  vim.json.decode([=["8.2.4"]=], { luanil = { object = false, array = false } })
 M._LICENSE = [=[
 The MIT License (MIT)
 
